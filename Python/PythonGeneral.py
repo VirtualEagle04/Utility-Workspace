@@ -12,7 +12,7 @@ y = float(3) #y will be 3.0
 z = str(3) #z will be '3'
 
 #Getting the Type
-# To get the type of a variable, we use:
+# To get the type of variable, we use:
 type(myInt) #will be int
 type(myFloat) #will be float 
 type(myString1) #will be str
