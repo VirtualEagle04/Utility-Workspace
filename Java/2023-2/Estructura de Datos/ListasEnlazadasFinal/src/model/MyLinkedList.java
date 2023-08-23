@@ -108,7 +108,7 @@ public class MyLinkedList<E> {
 		Node<E> currentNode = this.first;
 		int counter = 0;
 		
-		if(index < size()) return null;
+		if(index < 0 || index >= size()) return null;
 		
 		while(currentNode != null && counter < index) {
 			counter++;
@@ -117,6 +117,24 @@ public class MyLinkedList<E> {
 		
 		if(currentNode != null) targetNode = currentNode;
 		return targetNode;
+	}
+	
+	public void remove(int index) {
+		if(index < 0 || index >= size()) return;
+		if(index == 0) {
+			if(this.first.getNext() != null ) this.first = this.first.getNext();
+			else this.first = null;
+		}
+		else {
+			get(index - 1).setNext(get(index).getNext());
+		}
+	}
+	
+	public void replace(int index, E data) {
+		Node<E> newNode = new Node<E>(data, get(index).getNext());
+		if(index < 0 || index >= size()) return;
+		if(index == 0) this.first = newNode;
+		else get(index - 1).setNext(newNode);
 	}
 	
 	//Obtiene la posicion dado el dato
