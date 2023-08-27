@@ -10,7 +10,7 @@
 
 /*Whole Tag*/
 body {
-  background-color: rgb(29, 29, 29);
+  background-color: rgb(70, 70, 70);
 }
 
 h3{
@@ -116,4 +116,410 @@ will apply this style
 #flowDiv{
   border: 5px solid white;
   display: flow-root;
+}
+
+#overflowDiv{
+  border: 2px solid white;
+  width: 150px;
+  height: 100px;
+  overflow: auto;
+}
+
+#displayDiv{
+  background-color: tomato;
+}
+
+#displaySpan{
+  background-color: lightgreen;
+}
+
+#displayDiv1{
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+}
+
+#displaySpan1{
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+#displayDiv2{
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+  display: inline;
+}
+
+#displaySpan2{
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+  display: inline;
+}
+
+#displayDiv3{
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+#displaySpan3{
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  overflow: auto;
+}
+
+#displayDiv4{
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.whExample{
+  background-color: lightgrey;
+  border: 2px solid white;
+  padding: 25px;
+  box-sizing: border-box;
+  height: auto;
+  width: 50%;
+  float: left;
+}
+
+.relativePos{
+  color: white;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(0, 75, 113);
+  position: relative;
+  top: -50px;
+  left: 100px;
+}
+
+.fixedPos{
+  color: white;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(0, 75, 113);
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+
+.relativePos2{
+  color: white;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(0, 75, 113);
+  position: relative;
+}
+
+.absolutePos{
+  color: white;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 0, 0);
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.stickyPos{
+  color: white;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(0, 75, 113);
+  position: sticky;
+  top: 0px;
+  right: 0px;
+}
+
+.backgroundImage{
+  width: 2000px;
+  height: 1800px;
+  background-image: url(images/blackhole.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.convinators{
+  border: 2px solid white;
+}
+
+.convinatorsDescendant p{
+  border: 2px solid white;
+  background-color: black;
+}
+
+.convinatorsChild > p{
+  border: 2px solid white;
+  background-color: black;
+}
+
+.convinatorsGeneral ~ p{
+  border: 2px solid white;
+  background-color: black;
+}
+
+.convinatorsAdjacent + p{
+  border: 2px solid white;
+  background-color: black;
+}
+
+.pseudoLink{
+  color: lightseagreen;
+}
+
+.pseudoLink:hover{
+  font-size: 1.2em;
+  color: brown;
+}
+
+.pseudoLink:active{
+  font-size: 1.2em;
+  color: rgb(255, 244, 36);
+}
+
+/*Once the hyperlink has been clicked*/
+.pseudoLink:visited{
+  color:hsl(95, 100%, 43%);
+}
+
+.pseudoList:hover{
+  background-color: grey;
+}
+
+.pseudoList2:not(:hover){
+  background-color: grey;
+}
+
+.pseudoList3:nth-child(2n){
+  background-color: grey;
+}
+
+.pseudoDiv p{
+  background-color: rgb(0, 174, 255);
+  padding: 10px;
+  visibility: hidden;
+}
+
+.pseudoDiv:hover p{
+  background-color: rgb(0, 174, 255);
+  padding: 10px;
+  visibility: visible;
+}
+
+.pseudoH1::first-letter{
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.pseudoP::first-line{
+  background-color: rgb(98, 3, 98);
+}
+
+.pseudoP::selection{
+  background-color: rgb(138, 0, 0);
+}
+
+.pseudoElementList li::before{
+  content: "(^_^): ";
+}
+
+.pseudoElementList li::after{
+  content: "(°_0): ";
+}
+
+.pseudoElementList li::marker{
+  content: "- ";
+  color: red;
+  font-size: 1.2em;
+}
+
+.pagination{
+  text-align: center;
+}
+
+.pagination a{
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  display: inline-block;
+}
+
+.pagination a.active{
+  background-color: hsl(120, 59%, 49%);
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active){
+  background-color: hsl(0, 0%, 73%);
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.dropdown{
+  display: inline-block;
+}
+
+.dropdown button{
+  background-color: white;
+  font-style: oblique;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown a{
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.dropdown .content{
+  display: none;
+  background-color: hsl(0, 0%, 95%);
+  position: absolute;
+  min-width: 100px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+
+.dropdown:hover .content{
+  display: block;
+}
+
+.dropdown:hover button{
+  background-color: hsl(0, 0%, 70%);
+}
+
+.dropdown a:hover{
+  background-color: hsl(0, 0%, 90%);
+}
+
+.navbar ul{
+  list-style-type: none;
+  background-color: hsl(0, 0%, 25%);
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.navbar a{
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  float: left;
+}
+
+.navbar a:hover{
+  background-color: hsl(0, 0%, 10%);
+  
+}
+
+main{
+  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.flexboxEx{
+  display: flex;
+  border: 10px solid white;
+  height: 50vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flexbox{
+  width: 150px;
+  height: 150px;
+  font-size: 8em;
+  text-align: center;
+  border-radius: 15px;  
+}
+
+#flexbox1{
+  background-color: hsl(0, 100%, 70%);
+}
+
+#flexbox2{
+  background-color: hsl(54, 100%, 70%);
+}
+
+#flexbox3{
+  background-color: hsl(133, 100%, 70%);
+}
+
+#flexbox4{
+  background-color: hsl(206, 100%, 70%);
+}
+
+.animBox{
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  font-size: 13em;
+  text-align: center;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideLeft{
+  from{transform: translateX(300%);}
+}
+
+@keyframes slideRight{
+  to{transform: translateX(300%);}
+}
+
+@keyframes slideUp{
+  from{transform: translateY(300%);}
+}
+
+@keyframes slideDown{
+  to{transform: translateY(300%);}
+}
+
+@keyframes rotateX{
+  100%{transform: rotateX(360deg);}
+}
+
+@keyframes rotateY{
+  100%{transform: rotateY(360deg);}
+}
+
+@keyframes rotateZ{
+  25%{transform: rotateZ(360deg);}
+}
+
+@keyframes grow{
+  50%{transform: scale(2, 2);}
+}
+
+@keyframes shrink{
+  50%{transform: scale(0.5, 0.5);}
+}
+
+@keyframes fade{
+  50%{opacity: 0;}
 }
