@@ -20,7 +20,7 @@
 </head>
 <body>
     <!--Inline CSS-->
-    <h3 style="color: darkslategray">Inline CSS Styling</h3>
+    <h3 style="color: rgb(32, 116, 116)">Inline CSS Styling</h3>
     <h3 class="internalCssClass">Internal CSS Styling</h3>
     
     <!--External CSS-->
@@ -88,7 +88,7 @@
     
     <hr><h3 class="sansSerif" style="text-shadow: -2px -2px 2px red, 2px 2px 2px blue">Shadows</h3>
     <div id="div1">
-        <h3 style="color: white; text-align: center;">Box Shadows!</h3>s
+        <h3 style="color: white; text-align: center;">Box Shadows!</h3>
     </div>
     
     <hr><h3 class="sansSerif" >Margins</h3>
@@ -105,7 +105,236 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nesciunt incidunt? Harum fuga eligendi laborum alias nobis aliquam accusantium maiores enim reiciendis fugiat, beatae rerum deserunt quo? Quos, eligendi assumenda?</p>
     </div>
     
+    <hr><h3 class="sansSerif" >Overflow Property</h3>
+    <div id="overflowDiv">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Ratione fugit, ad magnam, consequuntur dolorem animi ipsum 
+            ut neque architecto fuga voluptatibus perferendis cumque mollitia 
+            eius magni delectus voluptatem facilis unde?
+        </p>
+    </div>
     
+    
+    
+    <hr><h3 class="sansSerif" >Display Property</h3>
+    <div id="displayDiv">Div takes all the entire width</div>
+    <span id="displaySpan">Span takes just the necessary space to show content</span>
+    This text is not a paragraph.
+    <div id="displayDiv1">Div with custom w/h. Currently a block element.</div>
+    <span id="displaySpan1">Span with custom w/h. Currently a block element.</span>
+    This text is not a paragraph.
+    <br>
+    <div id="displayDiv2">Div with custom w/h. Currently a inline element.</div>
+    <span id="displaySpan2">Span with custom w/h. Currently a inline element.</span>
+    This text is not a paragraph.
+    <br>
+    <div id="displayDiv3">Div with custom w/h. Currently a inline-block element.</div>
+    <span id="displaySpan3">Span with custom w/h. Currently a inline-block element.</span>
+    This text is not a paragraph.
+    <br>
+    <div id="displayDiv4">Div with custom w/h. Currently a inline-block element and hidden.</div>
+    <span id="displaySpan3">Span with custom w/h. Currently a inline-block element. Div is hidden</span>
+    This text is not a paragraph.
+    <br>
+    
+    <hr><h3 class="sansSerif">Width and Height</h3>
+    <div class="whExample">
+        <h2>This is #1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptate, sapiente quam quidem quaerat aut? Deleniti saepe porro dolorem sapiente. Consequuntur ad officia a molestias vitae alias commodi soluta id!</p>
+    </div>
+    <div class="whExample">
+        <h2>This is #2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptate, sapiente quam quidem quaerat aut? Deleniti saepe porro dolorem sapiente. Consequuntur ad officia a molestias vitae alias commodi soluta id!</p>
+    </div>
+    
+    <hr><h3 class="sansSerif">Position</h3>
+    
+    <div class="stickyPos">
+        Sticky Positon
+    </div>
+    
+    <div class="relativePos">
+        Relative Positon
+    </div>
+    <div class="fixedPos">
+        Fixed Positon
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae veniam temporibus iusto sint odio dicta est recusandae. Dignissimos, cupiditate et cumque accusamus molestias minus quibusdam ratione illum, at odit corporis.</p>
+    </div>
+    
+    <div class="relativePos2">
+        <div class="absolutePos">
+            Absolute Positon
+        </div>
+    </div>
+    
+    <hr><h3 class="sansSerif">Background</h3>
+    <div class="backgroundImage"></div>
+    
+    <hr><h3 class="sansSerif">Convinators</h3>
+    <div class="convinators">
+        <p>This is #1</p>
+        <p>This is #2</p>
+        <div>
+            <p>This is #3</p>
+        </div>
+    </div>
+    <p>This is #4</p><hr>
+    
+    <div class="convinatorsDescendant">
+        <p>Descendant</p>
+        <p>Descendant</p>
+        <div>
+            <p>Descendant</p>
+        </div>
+    </div>
+    <p>This is #4</p><hr>
+    
+    <div class="convinatorsChild">
+        <p>Children</p>
+        <p>Children</p>
+        <div>
+            <p>This is #3</p>
+        </div>
+    </div>
+    <p>This is #4</p><hr>
+    
+    <div class="convinatorsAdjacent">
+        <p>This is #1</p>
+        <p>This is #2</p>
+        <div>
+            <p>This is #3</p>
+        </div>
+    </div>
+    
+    <p>Adjacent Sibling</p>
+    <p>Not an Adjacent Sibling</p><hr>
+    
+    <!--div class="convinatorsGeneral">
+        <p>This is #1</p>
+        <p>This is #2</p>
+        <div>
+            <p>This is #3</p>
+        </div>
+    </div>
+    <p>General Sibling</p><hr-->
+    
+    <hr><h3 class="sansSerif">Pseudo-Classes</h3>
+    <p>Keywords added to a selector. Changes behaviour on a certain state.</p>
+    
+    <a href="https://Google.com" target="_blank" class="pseudoLink">Google</a>
+    
+    <h3>One List</h3>
+    <ul>
+        <li class="pseudoList">This is #1</li>
+        <li class="pseudoList">This is #2</li>
+        <li class="pseudoList">This is #3</li>
+        <li class="pseudoList">This is #4</li>
+        <li class="pseudoList">This is #5</li>
+        <li class="pseudoList">This is #6</li>
+        <li class="pseudoList">This is #7</li>
+        <li class="pseudoList">This is #8</li>
+        <li class="pseudoList">This is #9</li>
+        <li class="pseudoList">This is #10</li>
+    </ul>
+    
+    <h3>Other List</h3>
+    <ul>
+        <li class="pseudoList2">This is #1</li>
+        <li class="pseudoList2">This is #2</li>
+        <li class="pseudoList2">This is #3</li>
+        <li class="pseudoList2">This is #4</li>
+        <li class="pseudoList2">This is #5</li>
+        <li class="pseudoList2">This is #6</li>
+        <li class="pseudoList2">This is #7</li>
+        <li class="pseudoList2">This is #8</li>
+        <li class="pseudoList2">This is #9</li>
+        <li class="pseudoList2">This is #10</li>
+    </ul>
+    
+    <h3>Other List</h3>
+    <ul>
+        <li class="pseudoList3">This is #1</li>
+        <li class="pseudoList3">This is #2</li>
+        <li class="pseudoList3">This is #3</li>
+        <li class="pseudoList3">This is #4</li>
+        <li class="pseudoList3">This is #5</li>
+        <li class="pseudoList3">This is #6</li>
+        <li class="pseudoList3">This is #7</li>
+        <li class="pseudoList3">This is #8</li>
+        <li class="pseudoList3">This is #9</li>
+        <li class="pseudoList3">This is #10</li>
+    </ul>
+    
+    <h3>Div Element</h3>
+    <div class="pseudoDiv">Hover Here!
+        <p>Hello World!</p>
+    </div>
+    
+    <hr><h3 class="sansSerif">Pseudo-Elements</h3>
+    <h1 class="pseudoH1">Hello</h1>
+    <p  class="pseudoP">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde repudiandae, impedit ipsa accusantium nam optio, voluptatem nisi sunt veniam fugit delectus dolor maiores nobis ullam animi, nesciunt necessitatibus nemo commodi!</p>
+    <ul class="pseudoElementList">
+        <li id="apple">Apple</li>
+        <li id="orange">Orange</li>
+        <li id="banana">Banana</li>
+    </ul>
+    
+    <hr><h3 class="sansSerif">Pagination</h3>
+    <h3>This is Page #1</h3>
+    
+    <div class="pagination">
+        <a href="index.html"> < </a>
+        <a href="index.html" class="active">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page2.html"> > </a>
+    </div>
+    
+    <hr><h3 class="sansSerif">Dropdown Menu</h3>
+    
+    <div class="dropdown">
+        <button>Food</button>
+        <div class="content">
+            <a href="">Apple</a>
+            <a href="">Orange</a>
+            <a href="">Banana</a>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, suscipit id est omnis accusamus, quis eaque molestias nostrum reiciendis nihil dolores beatae eligendi aliquid ab explicabo laudantium incidunt in esse?</p>
+    
+    <hr><h3 class="sansSerif">Navigation Bar</h3>
+    
+    <h3 style="text-align: center;">This is my name!</h3>
+    <nav class="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h3>This is the Home Page</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, eligendi iste architecto quod dolore voluptatem quia deleniti beatae nostrum earum natus deserunt a, nulla nisi eveniet, itaque aliquid nihil hic!</p>
+    </main>
+    
+    <hr><h3 class="sansSerif">Flexbox</h3>
+    
+    <div class="flexboxEx">
+        <div class="flexbox" id="flexbox1">1</div>
+        <div class="flexbox" id="flexbox2">2</div>
+        <div class="flexbox" id="flexbox3">3</div>
+        <div class="flexbox" id="flexbox4">4</div>
+        
+    </div>
+    
+    <hr><h3 class="sansSerif">Animation</h3>
+    
+    <div class="animBox">Hi</div>
     
 </body>
 </html>
