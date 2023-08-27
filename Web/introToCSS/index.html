@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Intro to CSS Styling</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Mono&family=Wavefont&display=swap" rel="stylesheet">
+    
+    <!--Internal CSS-->
+    <style>
+        .internalCssClass{
+            color: lightsalmon;
+        }
+    </style>
+    
+</head>
+<body>
+    <!--Inline CSS-->
+    <h3 style="color: darkslategray">Inline CSS Styling</h3>
+    <h3 class="internalCssClass">Internal CSS Styling</h3>
+    
+    <!--External CSS-->
+    <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, suscipit. Officiis laborum quas, quo quae dolor eligendi optio atque itaque distinctio deserunt molestias debitis natus cum, velit quod sit quidem!</p>
+    <p id="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, suscipit. Officiis laborum quas, quo quae dolor eligendi optio atque itaque distinctio deserunt molestias debitis natus cum, velit quod sit quidem!</p>
+    <p id="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, suscipit. Officiis laborum quas, quo quae dolor eligendi optio atque itaque distinctio deserunt molestias debitis natus cum, velit quod sit quidem!</p>
+    <p id="p4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, suscipit. Officiis laborum quas, quo quae dolor eligendi optio atque itaque distinctio deserunt molestias debitis natus cum, velit quod sit quidem!</p>
+    
+    <hr><h3 class="sansSerif">Fonts</h3>
+    <p class="serif">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ipsa eligendi aperiam animi iste quisquam cumque quos doloremque ut expedita nisi iure dolor, labore corporis laborum nulla quaerat neque et!</p>
+    <p class="monospaced">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ipsa eligendi aperiam animi iste quisquam cumque quos doloremque ut expedita nisi iure dolor, labore corporis laborum nulla quaerat neque et!</p>
+    <p class="cursive">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ipsa eligendi aperiam animi iste quisquam cumque quos doloremque ut expedita nisi iure dolor, labore corporis laborum nulla quaerat neque et!</p>
+    <p class="wavefont">Wavefont</p>
+    <p class="blackOpsOne">Black Ops One</p>
+    <p class="robotoMono">Roboto Mono</p>
+    <p style="font-family: SedwigAveDisplay;">Sedwig Ave Display</p>
+    <p style="font-family: TulpenOne;">Tulpen One</p>
+    
+
+    
+    <hr><h3 class="sansSerif">Font Sizes</h3>
+    <p style="font-size: xx-small;">XX Small</p>
+    <p style="font-size: x-small;">X Small</p>
+    <p style="font-size: smaller;">Smaller</p>
+    <p style="font-size: small;">Small</p>
+    <p style="font-size: medium;">Medium (Normal)</p>
+    <p style="font-size: large;">Large</p>
+    <p style="font-size: larger;">Larger</p>
+    <p style="font-size: x-large;">X Large</p>
+    <p style="font-size: xx-large;">XX Large</p>
+    
+    <hr><h3 class="sansSerif">Font Weights</h3>
+    <p style="font-weight: lighter;">Lighter</p>
+    <p style="font-weight: normal;">Normal</p>
+    <p style="font-weight: bold;">Bold</p>
+    <p style="font-weight: bolder;">Bolder</p>
+    
+    <hr><h3 class="sansSerif">Font Styles</h3>
+    <p style="font-style: normal;">Normal</p>
+    <p style="font-style: italic;">Italic</p>
+    <p style="font-style: oblique;">Oblique</p>
+    
+    <hr><h3 class="sansSerif">Borders</h3>
+    <p style="border-style: dashed;">Dashed</p>
+    <p style="border-style: dotted;">Dotted</p>
+    <p style="border-style: double;">Double</p>
+    <p style="border-style: groove;">Groove</p>
+    <p style="border-style: ridge;">Ridge</p>
+    <p style="border-style: inset;">Inset</p>
+    <p style="border-style: outset;">Outset</p>
+    <p style="border-style: solid;">Solid</p>
+    <p style="border-style: hidden;">Hidden</p>
+    <p style="border-style: none;">None</p>
+    
+    <hr><h3 class="sansSerif">Border Styling</h3>
+    <p style="border-style: solid; border-width: 2px;">Solid 2px</p>
+    <p style="border-style: solid; border-width: 5px;">Solid 5px</p>
+    <p style="border-style: solid; border-width: 8px;">Solid 8px</p>
+    <p style="border-style: solid; border-color: red;">Solid Red</p>
+    <p style="border-style: solid; border-color: lightgreen; border-radius: 10px;">Solid Lightgreen Radius</p>
+    <p style="border-style: solid; border-color: blueviolet; border-radius: 10px;">Solid Lightgreen Radius</p>
+    <!--Shorthand Syntax-->
+    <p style="border: 5px dashed lightseagreen;">Shorthand Syntax Border</p>
+    <p style="border-bottom: 2px dotted lightyellow; border-right: 2px dotted lightyellow;">Shorthand Bottom-Right Border</p>
+    
+    <hr><h3 class="sansSerif" style="text-shadow: -2px -2px 2px red, 2px 2px 2px blue">Shadows</h3>
+    <div id="div1">
+        <h3 style="color: white; text-align: center;">Box Shadows!</h3>s
+    </div>
+    
+    <hr><h3 class="sansSerif" >Margins</h3>
+    <div class="box" id="box1" style="color: white;">Box 1: Margin Auto</div>
+    <div class="box" id="box2" style="color: white;">Box 2: Top 50 Left 90</div>
+    
+    <hr><h3 class="sansSerif" >Float Property</h3>
+    <div id="flowDiv">
+        <img id="img1" src="https://i.pinimg.com/474x/2d/af/d0/2dafd0b9a5782b6b6267ed311ef33c7b.jpg" height="150px" >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nesciunt incidunt? Harum fuga eligendi laborum alias nobis aliquam accusantium maiores enim reiciendis fugiat, beatae rerum deserunt quo? Quos, eligendi assumenda?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nesciunt incidunt? Harum fuga eligendi laborum alias nobis aliquam accusantium maiores enim reiciendis fugiat, beatae rerum deserunt quo? Quos, eligendi assumenda?</p>
+        <img id="img2" src="https://i.redd.it/2hdlzpub0rg31.jpg" height="150px" >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nesciunt incidunt? Harum fuga eligendi laborum alias nobis aliquam accusantium maiores enim reiciendis fugiat, beatae rerum deserunt quo? Quos, eligendi assumenda?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nesciunt incidunt? Harum fuga eligendi laborum alias nobis aliquam accusantium maiores enim reiciendis fugiat, beatae rerum deserunt quo? Quos, eligendi assumenda?</p>
+    </div>
+    
+    
+    
+</body>
+</html>
