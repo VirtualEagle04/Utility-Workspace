@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="styles/styles.css">
+	<script src="js/script.js"></script>
+	<meta charset="UTF-8" />
+	<title>Calculadora</title>
+</head>
+
+<body>
+
+	<h1>Mi Calculadora Web</h1>
+	<div class="input">
+		<div class="input-group mb-3">
+			<span class="input-group-text bg-primary-subtle">No 1</span>
+			<div class="form-floating">
+				<input type="text" class="form-control" id="input-num1" placeholder="num1">
+				<label for="input-num1">Digite el No 1</label>
+			</div>
+		</div>
+		<div class="input-group mb-3">
+			<span class="input-group-text bg-primary-subtle">No 2</span>
+			<div class="form-floating">
+				<input type="text" class="form-control" id="input-num2" placeholder="num2">
+				<label for="input-num2">Digite el No 2</label>
+			</div>
+		</div>
+		<div class="btn-group" role="group" aria-label="Basic example">
+			<button type="button" class="btn btn-primary" id="button-sum" onclick="sumarNum()">+</button>
+			<button type="button" class="btn btn-info" id="button-sub" onclick="restarNum()">-</button>
+			<button type="button" class="btn btn-success" id="button-mult" onclick="multiplicarNum()">x</button>
+			<button type="button" class="btn btn-warning" id="button-div" onclick="dividirNum()">/</button>
+		</div>
+		<br>
+		<hr>
+		<div class="input-group mb-3 bg-primary-subtle">
+			<span class="input-group-text bg-primary-subtle">Resultado</span>
+			<div class="form-floating">
+				<input id="result" class="form-control" type="text" value="..." aria-label="readonly input example"
+					readonly>
+				<label for="result">Respuesta</label>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
