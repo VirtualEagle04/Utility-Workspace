@@ -1,6 +1,6 @@
 body{
     font-family: 'Baloo Da 2';
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 nav{
@@ -20,7 +20,7 @@ nav li:hover{
 }
 
 .aboutme-image{
-    clip-path: circle(210px) ;
+    clip-path: circle(210px);
 }
 
 .separator{
@@ -29,19 +29,36 @@ nav li:hover{
 
 .projects-section{
     background-image: url(images/Petrol.jpg);
+    color: white;
+    box-shadow: 5px 5px 5px lightgray;
 }
 
 .projects-image{
     width: 90%;
     box-shadow: 5px 5px 5px rgb(29, 29, 29);
+    border-radius: 8px;
 }
 
 .projecs-flexbox-videos{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding-bottom: 80px;
 }
 
 .projects-video{
     width: 32%;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 5px;
+}
+
+.skills-section{
+    background-image: url(images/GradeGrey.jpg);
+    color: white;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.skills-list li{
+    list-style-type: none;
+    padding: 10px;
 }
