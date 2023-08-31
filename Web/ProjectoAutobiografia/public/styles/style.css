@@ -1,0 +1,83 @@
+body{
+    font-family: 'Baloo Da 2';
+    overflow-x: hidden;
+}
+
+nav{
+    box-shadow: 2px 2px 2px hsla(0, 0%, 83%, 0.587);
+}
+
+nav li:hover{
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px hsla(0, 0%, 83%, 0.587);
+}
+
+.aboutme-section{
+    /*background-image: url(/public/images/Lizard.jpg);*/
+    color: white;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.aboutme-image{
+    clip-path: circle(200px);
+}
+
+.separator{
+    height: 90px;
+    
+}
+
+.projects-section{
+    /*background-image: url(/public/images/Petrol.jpg);*/
+    color: white;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.projects-image{
+    width: 90%;
+    box-shadow: 5px 5px 5px rgb(29, 29, 29);
+    border-radius: 8px;
+}
+
+.projecs-flexbox-videos{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+}
+
+.projects-video{
+    width: 32%;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 5px;
+}
+
+.skills-section{
+    /*background-image: url(/public/images/GradeGrey.jpg);*/
+    color: white;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.skills-list li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+.contact-section{
+    background-color: rgb(182, 182, 182);
+    height: 100px;
+}
+
+.skills-flexbox-gallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+}
+
+.skills-flexbox{
+    width: 32%;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 5px;
+}
