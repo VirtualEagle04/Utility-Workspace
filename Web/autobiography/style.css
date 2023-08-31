@@ -20,11 +20,12 @@ nav li:hover{
 }
 
 .aboutme-image{
-    clip-path: circle(210px);
+    clip-path: circle(200px);
 }
 
 .separator{
-    height: 100px;
+    height: 90px;
+    
 }
 
 .projects-section{
@@ -61,4 +62,22 @@ nav li:hover{
 .skills-list li{
     list-style-type: none;
     padding: 10px;
+}
+
+.contact-section{
+    background-color: rgb(182, 182, 182);
+    height: 100px;
+}
+
+.skills-flexbox-gallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+}
+
+.skills-flexbox{
+    width: 32%;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 5px;
 }

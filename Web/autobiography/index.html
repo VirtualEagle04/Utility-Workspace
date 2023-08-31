@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/622a6db486.js" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     
-    <title>Federico Vargas Rozo</title>
+    <title>Autobiografía Fede</title>
     <link rel="icon" type="image/jpg" href="images/eagleStudio_384.png">
     <link rel="stylesheet" href="style.css">
     
@@ -29,25 +29,26 @@
           
                 <ul class="nav justify-content-end nav-pills me-5">
                     <li class="nav-item">
-                        <a class="nav-link text-black fs-5" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link text-black fs-5" aria-current="page" href="#aboutme-section">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black fs-5" href="#">Projectos</a>
+                        <a class="nav-link text-black fs-5" href="#projects-section">Projectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black fs-5" href="#">Habilidades</a>
+                        <a class="nav-link text-black fs-5" href="#skills-section">Habilidades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black fs-5" href="#">Contacto</a>
+                        <a class="nav-link text-black fs-5" href="#contact-section">Contacto</a>
                     </li>
                 </ul>
             </div>
         </nav>
       
-        <section class="aboutme-section">
-            <div class="offset-md-1 row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="images/me.png" class="aboutme-image">
+        <section class="aboutme-section" id="aboutme-section">
+            <div class="offset-md-1 row flex-lg-row-reverse align-items-center g-5 py-5 ">
+                <div class="col-10 col-sm-5 col-lg-6" >
+                    <img src="images/me1.png" class="aboutme-image" style="transform: translate(-50px, 100px);">
+                    <img src="images/me.png" class="aboutme-image" style="transform: translate(250px, -150px);">
                 </div>
                 <div class="col-lg-6">
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hola! Soy Federico</h1>
@@ -55,7 +56,7 @@
                         Actualmente tercer semestre, <del>y estoy que me pego un tiro</del>. Disfruto 
                         explorar todo tipo de tecnologías. Juego Tennis de Mesa en mis tiempos libres,
                         al igual que diseñar y programar pequeños proyectos. Desearía ir al exterior 
-                        a ampliar mis estudios y formar una vida allí.</p>
+                        a ampliar mis estudios.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
                 </div>
             </div>
@@ -63,20 +64,23 @@
       
         <section class="separator"></section>
         
-        <section class="projects-section">
+        <section class="projects-section" id="projects-section">
           
             <div class="container px-4 py-5">
                 <h2 class="pb-2 border-bottom text-black">Proyectos</h2>
             </div>
             
             <div class="offset-md-1 row flex-lg-row-reverse align-items-center py-5">
-                <div class="col-lg-6">
+                <div class="col-lg-6 ">
                     <p class="lead me-4">En mis tiempos libres trato de aprender nuevas herramientas que esten entre los
                         estandares mundiales, o que simplemente me permitan llevar a la realidad proyectos personales. 
                         <b class="fw-bold">Eagle Studio</b> nacio como un proyecto a largo plazo cuyo proposito actualmente es experimentar el desarrollo de 
-                        videojuegos de multiples estilos y plataformas.
+                        videojuegos de multiples estilos y plataformas. Por ahora solo he completado y publicado un pequeño juego, pues prefiero calidad antes que rapidez, para así comprender mejor conceptos de desarrollo en general. 
                     </p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a class="icon-link" href="https://play.google.com/store/apps/dev?id=5612459448991811839" target="_blank">
+                            <iconify-icon icon="bxl:play-store" style="color: rgb(0, 0, 0);" width="48" height="48"></iconify-icon>
+                        </a>
                 </div>
             </div>
                 <div class="col-10 col-sm-8 col-lg-6">
@@ -89,7 +93,7 @@
                     <source src="videos/mazeShorter.mp4">
                 </video>
                 <video class="projects-video" autoplay loop muted>
-                    <source src="">
+                    <source src="videos/shapesShort.mp4">
                 </video>
                 <video class="projects-video" autoplay loop muted>
                     <source src="videos/catacombsShorter.mp4">
@@ -99,7 +103,7 @@
         
         <section class="separator"></section>
         
-        <section class="skills-section">
+        <section class="skills-section" id="skills-section">
           
             <div class="container px-4 py-5">
                 <h2 class="pb-2 border-bottom text-black">Habilidades</h2>
@@ -107,10 +111,10 @@
             
             <div class="offset-md-1 row flex-lg-row-reverse align-items-center py-5">
                 <div class="col-lg-6">
-                    <p class="lead me-4">En mis tiempos libres trato de aprender nuevas herramientas que esten entre los
-                        estandares mundiales, o que simplemente me permitan llevar a la realidad proyectos personales. 
-                        <b class="fw-bold">Eagle Studio</b> nacio como un proyecto a largo plazo cuyo proposito actualmente es experimentar el desarrollo de 
-                        videojuegos de multiples estilos y plataformas.
+                    <p class="lead me-4">Trato de explorar nuevas areas del desarrollo de todo tipo. Al trabajar en pequeños proyectos es facil
+                        expandirse creativamente. Desde programación hasta arte, sonido, parte empresarial y demás. El desarrollo independiente
+                        no es facil, mucho menos corto. Trato de aplicar los conocimientos de mi carrera en mis pequeños proyectos, esto implica
+                        entenderlos de raiz para darles un funcionamiento en la realidad.
                     </p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 </div>
@@ -121,19 +125,13 @@
                         <li>
                             <iconify-icon icon="bxl:java" style="color: black;" width="48" height="48"></iconify-icon>
                             <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" style="width: 60%"></div>
+                                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" style="width: 53%"></div>
                               </div>
                         </li>
                         <li>
                             <iconify-icon icon="mdi:language-csharp" style="color: black;" width="48" height="48"></iconify-icon>
                             <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                                 <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width: 70%"></div>
-                              </div>
-                        </li>
-                        <li>
-                            <iconify-icon icon="simple-icons:lua" style="color: black;" width="48" height="48"></iconify-icon>
-                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped bg-primary progress-bar-animated" style="width: 25%"></div>
                               </div>
                         </li>
                         <li>
@@ -148,31 +146,48 @@
                                 <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width: 1%"></div>
                               </div>
                         </li>
-                        <li>
-                            <iconify-icon icon="akar-icons:html-fill" style="color: black;" width="48" height="48"></iconify-icon>
-                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%; background-color: orangered;"></div>
-                              </div>
-                        </li>
-                        <li>
-                            <iconify-icon icon="akar-icons:css-fill" style="color: black;" width="48" height="48"></iconify-icon>
-                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%; background-color: rgb(39, 164, 218);"></div>
-                              </div>
-                        </li>
-                        <li>
-                            <iconify-icon icon="material-symbols:javascript" style="color: black;" width="48" height="48"></iconify-icon>
-                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%; background-color: rgb(239, 216, 29);"></div>
-                              </div>
-                        </li>
+                        
                     </ul>
                     
                 </div>
+                
+                
             </div>¨
             
-            
+            <div class="skills-flexbox-gallery">
+
+                <img src="images/catacombsAseprite.png" class="skills-flexbox">
+                <img src="images/mazeCode.png" class="skills-flexbox">
+               
+                
+            </div>
+            <div class="skills-flexbox-gallery">
+
+                <img src="images/shapesBlender.png" class="skills-flexbox">
+                <img src="images/shapesImage.png" class="skills-flexbox">
+                <img src="images/catacombsImage.png" class="skills-flexbox">
+                
+            </div>
               
+        </section>
+        
+        <section class="contact-section" id="contact-section">
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                  <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Federico Vargas Rozo</span>
+                  </div>
+              
+                  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-body-secondary" target="_blank" href="mailto:federicovargasrozo@gmail.com"><iconify-icon icon="mdi:gmail" style="color: black;" width="48" height="48"></iconify-icon></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" target="_blank" href="https://twitter.com/VirtualEagle04"><iconify-icon icon="mdi:twitter" style="color: black;" width="48" height="48"></iconify-icon></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" target="_blank" href="https://play.google.com/store/apps/dev?id=5612459448991811839"><iconify-icon icon="bxl:play-store" style="color: rgb(0, 0, 0);" width="48" height="48"></iconify-icon></a></li>
+                  </ul>
+                </footer>
+            </div>
         </section>
       
 </body>
