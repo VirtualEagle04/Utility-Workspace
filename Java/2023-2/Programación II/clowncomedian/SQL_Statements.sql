@@ -1,0 +1,26 @@
+CREATE DATABASE clowncomedian;
+USE clowncomedian;
+
+CREATE TABLE person(
+id INT PRIMARY KEY,
+fullname VARCHAR(100) NOT NULL,
+cc INT UNIQUE NOT NULL,
+edlevel INT NOT NULL
+);
+
+CREATE TABLE clowns(
+id INT PRIMARY KEY,
+fullname VARCHAR(100) NOT NULL,
+cc INT UNIQUE NOT NULL,
+edlevel INT NOT NULL,
+sidekicknum INT NOT NULL
+);
+
+CREATE TABLE comedians(
+id INT PRIMARY KEY,
+fullname VARCHAR(100) NOT NULL,
+cc INT UNIQUE NOT NULL,
+edlevel INT NOT NULL,
+visitedopenmic INT NOT NULL
+);
+
