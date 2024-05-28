@@ -1,0 +1,80 @@
+<h2 class="mb-5">
+    @if(parametro){
+        Editar
+    } @else {
+       Nuevo 
+    } Parámetro
+</h2>
+
+<div class="row row-cols-3 justify-content-center" >
+    @if(form){
+        <form [formGroup]="form" (ngSubmit)="save()">
+            <div class="mb-3">
+                <label for="descripcion">Descripción</label>
+                <input #descripcion type="text" placeholder="Descripción" class="form-control" formControlName="descripcion" required maxlength="35">
+                @if(form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese una Descripción!</p>
+                }
+                @else if(form.get('descripcion')?.hasError('maxlength')){
+                    <p class="invalid-feedback d-block">Máximo 35 caracteres.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="fchaInicial">Fecha Inicial</label>
+                <input #fchaInicial type="datetime-local" class="form-control" formControlName="fchaInicial" required>
+                @if(form.get('fchaInicial')?.hasError('required') && form.get('fchaInicial')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese una fecha!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="fchaFinal">Fecha Final</label>
+                <input #fchaFinal type="datetime-local" class="form-control" formControlName="fchaFinal" required>
+                @if(form.get('fchaFinal')?.hasError('required') && form.get('fchaFinal')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese una fecha!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="valorNumero">Valor (Número)</label>
+                <input #valorNumero type="number" placeholder="Valor Numerico" class="form-control" formControlName="valorNumero" required>
+                @if(form.get('valorNumero')?.hasError('required') && form.get('valorNumero')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese un valor!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="valorTexto">Valor (Texto)</label>
+                <input #valorTexto type="text" placeholder="Valor Textual" class="form-control" formControlName="valorTexto" required maxlength="20">
+                @if(form.get('valorTexto')?.hasError('required') && form.get('valorTexto')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese un valor!</p>
+                }
+                @else if(form.get('valorTexto')?.hasError('maxlength')){
+                    <p class="invalid-feedback d-block">Máximo 20 caracteres.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="estado">Estado</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" value="A" #activo formControlName="estado" [checked]="true">
+                    <label for="activo">Activo</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" value="I" #inactivo formControlName="estado">
+                    <label for="inactivo">Inactivo</label>
+                </div>
+            </div>
+            
+            <div class="text-end">
+                <button type="button" class="btn btn-light" routerLink="/admin/parametros">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary ms-2" >
+                    @if(parametro){
+                        Actualizar
+                    } @else {
+                       Crear 
+                    }
+                </button>
+            </div>
+            
+        </form>
+    }
+</div>

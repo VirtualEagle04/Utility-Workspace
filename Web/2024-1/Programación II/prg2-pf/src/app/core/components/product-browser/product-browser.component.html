@@ -1,0 +1,35 @@
+<h2 class="mb-5">Productos</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ID Categoría</th>
+            <th>Descripción</th>
+            <th>Existencia</th>
+            <th>Precio de Venta Actual (COP)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(producto of productos; track producto.id){
+            <tr>
+                <td>{{ producto.id }}</td>
+                <td>{{ producto.idCategoria }}</td>
+                <td>{{ producto.descripcion }}</td>
+                <td>{{ producto.existencia }}</td>
+                <td>{{ producto.precioVentaActual }}</td>
+                
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" (click)="buy(producto)">
+                            Comprar
+                            <fa-icon [icon]="faBagShopping"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

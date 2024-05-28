@@ -1,0 +1,45 @@
+<h2 class="mb-5">Tipos de Usuario</h2>
+
+<div class="text-end">
+    <button class="btn btn-primary" routerLink="/admin/tiposUsuario/formTU">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Nuevo Tipo de Usuario
+    </button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(tipoUsuario of tiposUsuario; track tipoUsuario.id){
+            <tr>
+                <td>{{ tipoUsuario.id }}</td>
+                <td>{{ tipoUsuario.descripcion }}</td>
+                
+                @if(tipoUsuario.estado === 'A'){
+                    <td>Activo</td>
+                }
+                @else {
+                    <td>Inactivo</td>
+                }
+                
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" [routerLink]="['/admin/tiposUsuario',tipoUsuario.id, 'editTU']">
+                            <fa-icon [icon]="faPenToSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(tipoUsuario)">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

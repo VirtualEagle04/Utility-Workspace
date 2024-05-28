@@ -1,0 +1,45 @@
+<h2 class="mb-5">Tipos de Transacción</h2>
+
+<div class="text-end">
+    <button class="btn btn-primary" routerLink="/admin/tiposTx/formTX">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Nuevo Tipo de Transacción
+    </button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(tipotx of tipostx; track tipotx.id){
+            <tr>
+                <td>{{ tipotx.id }}</td>
+                <td>{{ tipotx.descripcion }}</td>
+                    
+                    @if(tipotx.estado === 'A'){
+                        <td>Activo</td>
+                    }
+                    @else {
+                        <td>Inactivo</td>
+                    }
+                    
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" [routerLink]="['/admin/tiposTx',tipotx.id, 'editTX']">
+                            <fa-icon [icon]="faPenToSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(tipotx)">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

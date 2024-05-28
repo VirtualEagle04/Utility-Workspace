@@ -1,0 +1,60 @@
+<h2 class="mb-5">Usuarios</h2>
+
+<div class="text-end mb-2">
+    <button class="btn btn-primary" routerLink="/admin/usuarios/formU">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Nuevo Usuario
+    </button>
+</div>
+
+<table class="table table-hover ">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Clave</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>ID Tipo de Usuario</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(usuario of usuarios; track usuario.id){
+            <tr>
+                <td>{{ usuario.id }}</td>
+                <td>{{ usuario.login }}</td>
+                <td>{{ usuario.clave }}</td>
+                <td>{{ usuario.nombres }}</td>
+                <td>{{ usuario.apellidos }}</td>
+                    @if(usuario.idTipoUsuario === '1'){
+                        <td>[1] Administrador</td>
+                    }
+                    @else if (usuario.idTipoUsuario === '2') {
+                        <td>[2] Vendedor</td>
+                    }
+                    @else {
+                        <td>[3] Comprador</td>
+                    }
+                    
+                    @if(usuario.estado === 'A'){
+                        <td>Activo</td>
+                    }
+                    @else {
+                        <td>Inactivo</td>
+                    }
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" [routerLink]="['/admin/usuarios',usuario.id, 'editU']">
+                            <fa-icon [icon]="faPenToSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(usuario)">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

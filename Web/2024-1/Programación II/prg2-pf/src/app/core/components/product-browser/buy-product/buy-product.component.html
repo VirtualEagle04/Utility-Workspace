@@ -1,0 +1,107 @@
+<h2 class="mb-5">
+    Comprar Producto
+</h2>
+
+<div class="row row-cols-4 justify-content-center" >
+    
+    
+    <form>
+        <div class="mb-3">
+            <label for="idCategoria" >ID Categoría</label>
+            <input type="text" #idCategoria class="form-control" disabled value="{{ producto?.idCategoria }}">
+        </div>
+        <div class="mb-3">
+            <label for="descripcion">Descripción</label>
+            <input type="text" #descripcion class="form-control" disabled value="{{ producto?.descripcion }}">
+        </div>
+        <div class="mb-3">
+            <label for="existencia">Existencia</label>
+            <input type="text" #existencia class="form-control" disabled value="{{ producto?.existencia }}">
+        </div>
+        <div class="mb-3">
+            <label for="precioVentaActual">Precio de Venta Actual (COP)</label>
+            <input type="text" #precioVentaActual class="form-control" disabled value="{{ producto?.precioVentaActual }}">
+        </div> 
+    </form>
+    
+    
+    @if(form){
+        <form [formGroup]="form" (ngSubmit)="confirm()">
+            <div class="mb-3">
+                <label for="cantComprada">Cantidad a Comprar</label>
+                <input #cantComprada type="number" placeholder="Cantidad a Comprar" class="form-control" formControlName="cantComprada" required min="1">
+                @if(form.get('cantComprada')?.hasError('required') && form.get('cantComprada')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese la cantidad a comprar!</p>
+                }
+                @else if(form.get('cantComprada')?.hasError('min')){
+                    <p class="invalid-feedback d-block">Mínimo una (1) unidad.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="idTipoPago">Medio de Pago</label>
+                <select #idTipoPago class="form-select" formControlName="idTipoPago">
+                    
+                    @for (medioDePago of mediosDePago; track medioDePago.id) {
+                        @if(medioDePago.id === 1){
+                            <option  [selected]="true" value="{{ medioDePago.id }}" >{{ medioDePago.descripcion }}</option>
+                        }
+                        @else{
+                            <option value="{{ medioDePago.id }}" >{{ medioDePago.descripcion }}</option>
+                        }
+                    }
+                    
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="idBanco">Entidad Financiera</label>
+                <select #idBanco class="form-select" formControlName="idBanco">
+                    
+                    @for (entidadFinanciera of entidadesFinancieras; track entidadFinanciera.id) {
+                        @if(entidadFinanciera.id === 1){
+                            <option  [selected]="true" value="{{ entidadFinanciera.id }}" >{{ entidadFinanciera.nombre }}</option>
+                        }
+                        @else{
+                            <option value="{{ entidadFinanciera.id }}" >{{ entidadFinanciera.nombre }}</option>
+                        }
+                    }
+                    
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="idFranquicia">Franquicia</label>
+                <select #idFranquicia class="form-select" formControlName="idFranquicia">
+                    
+                    @for (franquicia of franquicias; track franquicia.id) {
+                        @if(franquicia.id === 1){
+                            <option  [selected]="true" value="{{ franquicia.id }}" >{{ franquicia.descripcion }}</option>
+                        }
+                        @else{
+                            <option value="{{ franquicia.id }}" >{{ franquicia.descripcion }}</option>
+                        }
+                    }
+                    
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="numTarjeta">Número de Tarjeta</label>
+                <input #numTarjeta type="text" placeholder="0000-1111-2222-3333" pattern="\d{4}-\d{4}-\d{4}-\d{4}" class="form-control" formControlName="numTarjeta" maxlength="20">
+                @if(form.get('numTarjeta')?.hasError('required') && form.get('numTarjeta')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese un Número de Tarjeta!</p>
+                }
+                @else if(form.get('numTarjeta')?.hasError('pattern')){
+                    <p class="invalid-feedback d-block">Siga el patron (0000-0000-0000-0000).</p>
+                }
+            </div>
+            
+            <div class="text-end">
+                <button type="button" class="btn btn-light" (click)="cancel()">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary ms-2" >
+                    Comprar
+                </button>
+            </div>
+            
+        </form>
+    }
+</div>

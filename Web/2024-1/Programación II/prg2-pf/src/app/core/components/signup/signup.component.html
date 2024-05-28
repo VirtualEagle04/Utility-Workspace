@@ -1,0 +1,63 @@
+<h2 class="mt-5 mb-5 text-center">
+    Registro
+</h2>
+
+<div class="row row-cols-3 justify-content-center" >
+    @if(form){
+        <form [formGroup]="form" (ngSubmit)="signupReq()">
+            <div class="mb-3">
+                <label for="login">Usuario</label>
+                <input #login type="text" placeholder="Usuario" class="form-control" formControlName="login" required minlength="5" maxlength="8">
+                @if(form.get('login')?.hasError('required') && form.get('login')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese un Usuario!</p>
+                }
+                @else if(form.get('login')?.hasError('minlength')){
+                    <p class="invalid-feedback d-block">Mínimo 5 caracteres</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="clave">Contraseña</label>
+                <input #clave type="password" placeholder="Contraseña" class="form-control" formControlName="clave" minlength="5" maxlength="256" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).+$"  required>
+                @if(form.get('clave')?.hasError('required') && form.get('clave')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese una Contraseña!</p>
+                }
+                @else if(form.get('clave')?.hasError('minlength')){
+                    <p class="invalid-feedback d-block">Mínimo 5 caracteres</p>
+                }
+                @else if(form.get('clave')?.hasError('pattern')){
+                    <p class="invalid-feedback d-block">Mínimo: 1 letra Mayúscula, 1 letra Minúscula, 1 Número, 1 Símbolo</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="nombres">Nombres</label>
+                <input #nombres type="text" placeholder="Nombres" class="form-control" formControlName="nombres" required>
+                @if(form.get('nombres')?.hasError('required') && form.get('nombres')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese Nombres!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="apellidos">Apellidos</label>
+                <input #apellidos type="text" placeholder="Apellidos" class="form-control" formControlName="apellidos" required>
+                @if(form.get('apellidos')?.hasError('required') && form.get('apellidos')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese Apellidos!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="idTipoUsuario">Tipo de Usuario</label>
+                <select #idTipoUsuario class="form-select" formControlName="idTipoUsuario">
+                    <option [selected]="true" value="3">Comprador</option>
+                    <option value="2">Vendedor</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-light" routerLink="/">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary ms-2" >
+                    Completar Registro
+                </button>
+            </div>
+            
+        </form>
+    }
+</div>

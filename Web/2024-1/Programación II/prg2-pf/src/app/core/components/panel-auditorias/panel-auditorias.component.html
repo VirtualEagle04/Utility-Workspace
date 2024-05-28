@@ -1,0 +1,26 @@
+<h2 class="mb-5">Auditorías</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Usuario</th>
+            <th>Acción</th>
+            <th>Comentarios</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(auditoria of auditorias; track auditoria.id){
+            <tr>
+                <td>{{ auditoria.id }}</td>
+                <td>{{ auditoria.fchaAudtria }}</td>
+                <td>{{ auditoria.usrioAudtria }}</td>
+                <td>{{ auditoria.accionAudtria }}</td>
+                <td>{{ auditoria.comentarioAudtria }}</td>
+                <td>{{ auditoria.addressAudtria }}</td>
+            </tr>
+        }
+    </tbody>
+</table>

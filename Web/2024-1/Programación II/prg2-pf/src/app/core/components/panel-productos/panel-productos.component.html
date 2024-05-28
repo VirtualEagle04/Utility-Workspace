@@ -1,0 +1,72 @@
+<h2 class="mb-5">Productos</h2>
+
+<div class="text-end">
+    <button class="btn btn-primary" routerLink="/admin/productos/formProd">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Nuevo Producto
+    </button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ID Categoría</th>
+            <th>Codigo</th>
+            <th>Descripción</th>
+            <th>Existencia</th>
+            <th>Precio de Venta Actual (COP)</th>
+            <th>Precio de Venta Anterior (COP)</th>
+            <th>Costo de Venta (COP)</th>
+            <th>Margen de Utilidad</th>
+            <th>Tiene IVA</th>
+            <th>Stock Mínimo</th>
+            <th>Stock Máximo</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(producto of productos; track producto.id){
+            <tr>
+                <td>{{ producto.id }}</td>
+                <td>{{ producto.idCategoria }}</td>
+                <td>{{ producto.codigo }}</td>
+                <td>{{ producto.descripcion }}</td>
+                <td>{{ producto.existencia }}</td>
+                <td>{{ producto.precioVentaActual }}</td>
+                <td>{{ producto.precioVentaAnterior }}</td>
+                <td>{{ producto.costoVenta }}</td>
+                <td>{{ producto.margenUtilidad }} %</td>
+                
+                @if(producto.tieneIva === 'S'){
+                    <td>Si</td>
+                }
+                @else {
+                    <td>No</td>
+                }
+                
+                <td>{{ producto.stockMinimo }}</td>
+                <td>{{ producto.stockMaximo }}</td>
+                    
+                @if(producto.estado === 'A'){
+                    <td>Activo</td>
+                }
+                @else {
+                    <td>Inactivo</td>
+                }
+                    
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" [routerLink]="['/admin/productos',producto.id, 'editProd']">
+                            <fa-icon [icon]="faPenToSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(producto)">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

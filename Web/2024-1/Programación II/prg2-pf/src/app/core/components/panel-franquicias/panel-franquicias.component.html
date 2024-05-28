@@ -1,0 +1,45 @@
+<h2 class="mb-5">Franquicias</h2>
+
+<div class="text-end">
+    <button class="btn btn-primary" routerLink="/admin/franquicias/formFra">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Nueva Franquicia
+    </button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(franquicia of franquicias; track franquicia.id){
+            <tr>
+                <td>{{ franquicia.id }}</td>
+                <td>{{ franquicia.descripcion }}</td>
+                
+                @if(franquicia.estado === 'A'){
+                    <td>Activo</td>
+                }
+                @else {
+                    <td>Inactivo</td>
+                }
+                
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" [routerLink]="['/admin/franquicias',franquicia.id, 'editFra']">
+                            <fa-icon [icon]="faPenToSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(franquicia)">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

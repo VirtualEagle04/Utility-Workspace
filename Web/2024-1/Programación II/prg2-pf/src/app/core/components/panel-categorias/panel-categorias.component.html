@@ -1,0 +1,45 @@
+<h2 class="mb-5">Categorías</h2>
+
+<div class="text-end">
+    <button class="btn btn-primary" routerLink="/admin/categorias/formC">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Nueva Categoría
+    </button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(categoria of categorias; track categoria.id){
+            <tr>
+                <td>{{ categoria.id }}</td>
+                <td>{{ categoria.nombre }}</td>
+                
+                @if(categoria.estado === 'A'){
+                    <td>Activo</td>
+                }
+                @else {
+                    <td>Inactivo</td>
+                }
+                
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" [routerLink]="['/admin/categorias',categoria.id, 'editC']">
+                            <fa-icon [icon]="faPenToSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(categoria)">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

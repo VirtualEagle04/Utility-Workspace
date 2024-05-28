@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+</h:head> 
+<h:body> 
+	<h:form>
+		<h:outputLabel value="LISTA DE ESTUDIANTES" />
+		<h:commandButton action="#{estudianteMB.crearEstudiante()}" value="Nuevo" />
+		<h:dataTable value="#{estudianteMB.listaEstudiantes}" var="estudianteFila">
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Editar" />
+				</f:facet>
+				<h:commandLink action="estudianteExistente.xhtml">
+					<h:graphicImage value="/img/editar.png" />
+					<f:setPropertyActionListener value="#{estudianteFila}" target="#{estudianteMB.estudianteExistente}" />
+				</h:commandLink>
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Eliminar" />
+				</f:facet>
+				<h:commandLink action="#{estudianteMB.eliminarEstudiante()}">
+					<h:graphicImage value="/img/eliminar.png" />
+					<f:setPropertyActionListener value="#{estudianteFila.identificacion}" target="#{estudianteMB.identificacionEstudianteAEliminar}" />
+				</h:commandLink>
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Identificación" />
+				</f:facet>
+				<h:outputLabel value="#{estudianteFila.identificacion}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Nombres" />
+				</f:facet>
+				<h:outputLabel value="#{estudianteFila.nombres}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Apellidos" />
+				</f:facet>
+				<h:outputLabel value="#{estudianteFila.apellidos}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Fecha Nacimiento" />
+				</f:facet>
+				<h:outputLabel value="#{estudianteFila.fechaNacimiento}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Promedio" />
+				</f:facet>
+				<h:outputLabel value="#{estudianteFila.promedio}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="Inactivo" />
+				</f:facet>
+				<h:outputLabel value="#{estudianteFila.inactivo}" />
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body> 
+</html>

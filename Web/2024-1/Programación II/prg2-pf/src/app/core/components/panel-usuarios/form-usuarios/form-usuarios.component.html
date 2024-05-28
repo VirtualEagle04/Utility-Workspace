@@ -1,0 +1,90 @@
+<h2 class="mb-5">
+    @if(usuario){
+        Editar
+    } @else {
+       Nuevo 
+    } Usuario
+</h2>
+
+<div class="row row-cols-3 justify-content-center" >
+    @if(form){
+        <form [formGroup]="form" (ngSubmit)="save()">
+            <div class="mb-3">
+                <label for="login">Usuario</label>
+                <input #login type="text" placeholder="Usuario" class="form-control" formControlName="login" required minlength="5" maxlength="8">
+                @if(form.get('login')?.hasError('required') && form.get('login')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese un Usuario!</p>
+                }
+                @else if(form.get('login')?.hasError('minlength')){
+                    <p class="invalid-feedback d-block">Mínimo 5 caracteres</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="clave">Contraseña</label>
+                <input #clave type="password" placeholder="Contraseña" class="form-control" formControlName="clave" minlength="5" maxlength="256" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).+$">
+                @if(form.get('clave')?.hasError('required') && form.get('clave')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese una Contraseña!</p>
+                }
+                @else if(form.get('clave')?.hasError('minlength')){
+                    <p class="invalid-feedback d-block">Mínimo 5 caracteres</p>
+                }
+                @else if(form.get('clave')?.hasError('pattern')){
+                    <p class="invalid-feedback d-block">Mínimo: 1 letra Mayúscula, 1 letra Minúscula, 1 Número, 1 Símbolo</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="nombres">Nombres</label>
+                <input #nombres type="text" placeholder="Nombres" class="form-control" formControlName="nombres">
+                @if(form.get('nombres')?.hasError('required') && form.get('nombres')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese Nombres!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="apellidos">Apellidos</label>
+                <input #apellidos type="text" placeholder="Apellidos" class="form-control" formControlName="apellidos">
+                @if(form.get('apellidos')?.hasError('required') && form.get('apellidos')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese Apellidos!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="idTipoUsuario">Tipo de Usuario</label>
+                <select #idTipoUsuario class="form-select" formControlName="idTipoUsuario">
+                    
+                    @for (tipoUsuario of tiposUsuario; track tipoUsuario.id) {
+                        @if(tipoUsuario.descripcion === 'Comprador'){
+                            <option [selected]="true" value="{{ tipoUsuario.id }}">{{ tipoUsuario.descripcion }}</option>
+                        }
+                        @else{
+                            <option value="{{tipoUsuario.id}}" >{{ tipoUsuario.descripcion }}</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="estado">Estado</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" value="A" #activo formControlName="estado" [checked]="true">
+                    <label for="activo">Activo</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" value="I" #inactivo formControlName="estado">
+                    <label for="inactivo">Inactivo</label>
+                </div>
+            </div>
+            
+            <div class="text-end">
+                <button type="button" class="btn btn-light" routerLink="/admin/usuarios">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary ms-2" >
+                    @if(usuario){
+                        Actualizar
+                    } @else {
+                       Crear 
+                    }
+                </button>
+            </div>
+            
+        </form>
+    }
+</div>

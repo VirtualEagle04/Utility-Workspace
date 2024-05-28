@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<h:body>
+	<h:form prependId="false">
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nombre" />
+			<h:inputText value="#{estudianteMB.estudianteNuevo.nombres}" required="true" requiredMessage="Campo nombres es obligatorio" id="txtNombres"/>
+			<h:message for="txtNombres" errorStyle="color:red"/>			
+			<h:outputLabel value="Apellido" />
+			<h:inputText value="#{estudianteMB.estudianteNuevo.apellidos}" required="true" requiredMessage="Campo apellidos es obligatorio" id="txtApellidos"/>
+			<h:message for="txtApellidos" errorStyle="color:red"/>			
+			<h:outputLabel value="Identificación" />
+			<h:inputText value="#{estudianteMB.estudianteNuevo.identificacion}" required="true" requiredMessage="Campo identificación es obligatorio" id="txtIdentificacion"/>
+			<h:message for="txtIdentificacion" errorStyle="color:red"/>			
+			<h:outputLabel value="Promedio" />
+			<h:inputText value="#{estudianteMB.estudianteNuevo.promedio}" required="true" requiredMessage="Campo promedio es obligatorio" id="txtPromedio">
+				<f:validateDoubleRange minimum="0.0" maximum="5.0"></f:validateDoubleRange>
+			</h:inputText>
+			<h:message for="txtPromedio" errorStyle="color:red"/>			
+			<h:outputLabel value="Inactivo" />
+			<h:selectBooleanCheckbox value="#{estudianteMB.estudianteNuevo.inactivo}" requiredMessage="Campo inactivo es obligatorio" id="chkInactivo"/>			
+			<h:message for="chkInactivo" errorStyle="color:red"/>			
+		</h:panelGrid>
+		<h:panelGrid columns="2">
+			<h:commandButton action="#{estudianteMB.guardarEstudianteNuevo()}" value="Guardar"/>
+			<h:commandButton action="listaEstudiante.xhtml" value="Regresar" />
+		</h:panelGrid>
+	</h:form>
+</h:body> 
+</html>
