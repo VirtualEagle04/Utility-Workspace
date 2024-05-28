@@ -1,0 +1,45 @@
+<h2 class="mb-5">Entidades Financieras</h2>
+
+<div class="text-end">
+    <button class="btn btn-primary" routerLink="/admin/entidadesFinancieras/formEF">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Nueva Entidad Financiera
+    </button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(entidadFinanciera of entidadesFinancieras; track entidadFinanciera.id){
+            <tr>
+                <td>{{ entidadFinanciera.id }}</td>
+                <td>{{ entidadFinanciera.nombre }}</td>
+                
+                @if(entidadFinanciera.estado === 'A'){
+                    <td>Activo</td>
+                }
+                @else {
+                    <td>Inactivo</td>
+                }
+                
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" [routerLink]="['/admin/entidadesFinancieras',entidadFinanciera.id, 'editEF']">
+                            <fa-icon [icon]="faPenToSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(entidadFinanciera)">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

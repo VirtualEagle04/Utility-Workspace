@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Log-In</title>
+	<style>
+		* {
+			font-family: JetBrains Mono, monospace;
+		}
+		
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			background-color: #e8f0fe;
+		}
+		
+		.login-form {
+			background-color: white;
+			padding: 20px;
+			text-align: center;
+			border-radius: 15px;
+		}
+		
+		input{
+			display: block;
+			width: 90%;
+			margin: 10px auto;
+			padding: 8px;
+		}
+		
+		.boton {
+			display: block;
+			width: 90%;
+			margin: 10px auto;
+			padding: 8px;
+			background-color: #4caf50;
+			color: white;
+			border: none;
+			cursor: pointer;
+			border-radius: 10px;
+		}
+	</style>
+</h:head>
+<h:body>
+	<div class="login-form">
+		<h:form>
+			<h:outputLabel value="Log-In" />
+		</h:form>
+		
+	</div>
+	<h:form>
+		<h:inputText value="#{holaBean.nombre}"></h:inputText>
+		<h:commandButton value="Bienvenido" action="bienvenido"></h:commandButton>
+	</h:form>
+</h:body>
+</html>

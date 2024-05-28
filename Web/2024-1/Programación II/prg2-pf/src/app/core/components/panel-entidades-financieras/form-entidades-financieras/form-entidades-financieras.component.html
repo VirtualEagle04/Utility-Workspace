@@ -1,0 +1,49 @@
+<h2 class="mb-5">
+    @if(entidadFinanciera){
+        Editar
+    } @else {
+       Nueva 
+    } Entidad Financiera
+</h2>
+
+<div class="row row-cols-3 justify-content-center" >
+    @if(form){
+        <form [formGroup]="form" (ngSubmit)="save()">
+            <div class="mb-3">
+                <label for="nombre">Nombre</label>
+                <input #nombre type="text" placeholder="Descripción" class="form-control" formControlName="nombre" required maxlength="30">
+                @if(form.get('nombre')?.hasError('required') && form.get('nombre')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese un Nombre!</p>
+                }
+                @else if(form.get('nombre')?.hasError('maxlenght')){
+                    <p class="invalid-feedback d-block">Máximo 30 caracteres</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="estado">Estado</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" value="A" #activo formControlName="estado" [checked]="true">
+                    <label for="activo">Activo</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" value="I" #inactivo formControlName="estado">
+                    <label for="inactivo">Inactivo</label>
+                </div>
+            </div>
+            
+            <div class="text-end">
+                <button type="button" class="btn btn-light" routerLink="/admin/entidadesFinancieras">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary ms-2" >
+                    @if(entidadFinanciera){
+                        Actualizar
+                    } @else {
+                       Crear 
+                    }
+                </button>
+            </div>
+            
+        </form>
+    }
+</div>

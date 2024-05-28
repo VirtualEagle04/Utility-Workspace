@@ -1,0 +1,148 @@
+<h2 class="mb-5">
+    @if(producto){
+        Editar
+    } @else {
+       Nuevo 
+    } Producto
+</h2>
+
+<div class="row row-cols-3 justify-content-center" >
+    @if(form){
+        <form [formGroup]="form" (ngSubmit)="save()">
+            <div class="mb-3">
+                <label for="idCategoria">Categoría</label>
+                <select #idCategoria class="form-select" formControlName="idCategoria">
+                    
+                    @for (categoria of categorias; track categoria.id) {
+                        @if(categoria.nombre === 'Tecnología'){
+                            <option [selected]="true" value="{{ categoria.id }}">{{ categoria.nombre }}</option>
+                        }@else {
+                            <option value="{{ categoria.id }}">{{ categoria.nombre }}</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="codigo">Codigo</label>
+                <input #codigo type="text" placeholder="Codigo" class="form-control" formControlName="codigo" required maxlength="4">
+                @if(form.get('codigo')?.hasError('required') && form.get('codigo')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese un Codigo!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="descripcion">Descripción</label>
+                <input #descripcion type="text" placeholder="Descripción" class="form-control" formControlName="descripcion" required maxlength="60">
+                @if(form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese una Descripción!</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="existencia">Existencia</label>
+                <input #existencia type="number" placeholder="Existencia" class="form-control" formControlName="existencia" required min="1">
+                @if(form.get('existencia')?.hasError('required') && form.get('existencia')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese la existencia!</p>
+                }
+                @else if(form.get('existencia')?.hasError('min')){
+                    <p class="invalid-feedback d-block">Mínimo una (1) existencia.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="precioVentaActual">Precio de Venta Actual</label>
+                <input #precioVentaActual type="number" placeholder="Precio de Venta Actual" class="form-control" formControlName="precioVentaActual" required min="1000" step="100">
+                @if(form.get('precioVentaActual')?.hasError('required') && form.get('precioVentaActual')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese el precio!</p>
+                }
+                @else if(form.get('precioVentaActual')?.hasError('min')){
+                    <p class="invalid-feedback d-block">Mínimo 1000 COP de precio.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="precioVentaAnterior">Precio de Venta Anterior</label>
+                <input #precioVentaAnterior type="number" placeholder="Precio de Venta Anterior" class="form-control" formControlName="precioVentaAnterior" required min="1000" step="100">
+                @if(form.get('precioVentaAnterior')?.hasError('required') && form.get('precioVentaAnterior')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese el precio!</p>
+                }
+                @else if(form.get('precioVentaAnterior')?.hasError('min')){
+                    <p class="invalid-feedback d-block">Mínimo 1000 COP de precio.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="costoVenta">Costo de Venta</label>
+                <input #costoVenta type="number" placeholder="Costo de Venta" class="form-control" formControlName="costoVenta" required min="1000" step="100">
+                @if(form.get('costoVenta')?.hasError('required') && form.get('costoVenta')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese el costo!</p>
+                }
+                @else if(form.get('costoVenta')?.hasError('min')){
+                    <p class="invalid-feedback d-block">Mínimo 1000 COP de precio.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="margenUtilidad">% Margen de Utilidad</label>
+                <input #margenUtilidad type="number" placeholder="Margen de Utilidad" class="form-control" formControlName="margenUtilidad" required min="1">
+                
+                @if(form.get('margenUtilidad')?.hasError('required') && form.get('margenUtilidad')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese el porcentaje!</p>
+                }
+                @else if(form.get('margenUtilidad')?.hasError('min')){
+                    <p class="invalid-feedback d-block">Mínimo un 1 % de utilidad.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="tieneIva">IVA</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tieneIva" value="S" #tiene formControlName="tieneIva" [checked]="true">
+                    <label for="tiene">Tiene</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tieneIva" value="N" #notiene formControlName="tieneIva">
+                    <label for="notiene">No Tiene</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="stockMinimo">Stock Mínimo</label>
+                <input #stockMinimo type="number" placeholder="Stock Mín." class="form-control" formControlName="stockMinimo" required min="1">
+                @if(form.get('stockMinimo')?.hasError('required') && form.get('stockMinimo')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese el stock mínimo!</p>
+                }
+                @else if(form.get('stockMinimo')?.hasError('min')){
+                    <p class="invalid-feedback d-block">Mínimo una (1) existencia.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="stockMaximo">Stock Máximo</label>
+                <input #stockMaximo type="number" placeholder="Stock Máx." class="form-control" formControlName="stockMaximo" required min="1">
+                @if(form.get('stockMaximo')?.hasError('required') && form.get('stockMaximo')?.touched ){
+                    <p class="invalid-feedback d-block">Ingrese el stock máximo!</p>
+                }
+                @else if(form.get('stockMaximo')?.hasError('min')){
+                    <p class="invalid-feedback d-block">Mínimo una (1) existencia.</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="estado">Estado</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" value="A" #activo formControlName="estado" [checked]="true">
+                    <label for="activo">Activo</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" value="I" #inactivo formControlName="estado">
+                    <label for="inactivo">Inactivo</label>
+                </div>
+            </div>
+            
+            <div class="text-end">
+                <button type="button" class="btn btn-light" routerLink="/admin/productos">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary ms-2" >
+                    @if(producto){
+                        Actualizar
+                    } @else {
+                       Crear 
+                    }
+                </button>
+            </div>
+            
+        </form>
+    }
+</div>

@@ -1,0 +1,52 @@
+<h2 class="mb-5">Parámetros</h2>
+
+<div class="text-end">
+    <button class="btn btn-primary" routerLink="/admin/parametros/formPar">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Nuevo Parámetro
+    </button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Fecha Inicial</th>
+            <th>Fecha Final</th>
+            <th>Valor (Número)</th>
+            <th>Valor (Texto)</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(parametro of parametros; track parametro.id){
+            <tr>
+                <td>{{ parametro.id }}</td>
+                <td>{{ parametro.fchaInicial | date:'dd/MM/yyyy hh:mm a' }}</td>
+                <td>{{ parametro.fchaFinal | date:'dd/MM/yyyy hh:mm a' }}</td>
+                <td>{{ parametro.valorNumero }}</td>
+                <td>{{ parametro.valorTexto }}</td>
+                
+                    @if(parametro.estado === 'A'){
+                        <td>Activo</td>
+                    }
+                    @else {
+                        <td>Inactivo</td>
+                    }
+                    
+                <td class="text-end">
+                    <div class="btn-group">
+                        <button class="btn btn-primary" [routerLink]="['/admin/parametros',parametro.id, 'editPar']">
+                            <fa-icon [icon]="faPenToSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(parametro)">
+                            <fa-icon [icon]="faTrash"></fa-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

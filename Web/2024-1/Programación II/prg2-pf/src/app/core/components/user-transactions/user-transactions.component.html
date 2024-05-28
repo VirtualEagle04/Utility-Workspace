@@ -1,0 +1,36 @@
+<h2 class="mb-5">Mis Transacciones</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fecha-Hora</th>
+            <th>Usuario</th>
+            <th>ID Producto</th>
+            <th>Cantidad Comprada</th>
+            <th>Valor Unitario</th>
+            <th>ID Tipo de Pago</th>
+            <th>ID Banco</th>
+            <th>ID Franquicia</th>
+            <th>Numero de Tarjeta</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for(transaccion of transacciones; track transaccion.id){
+            <tr>
+                <td>{{ transaccion.id }}</td>
+                <td>{{ transaccion.fechaHora | date:'dd/MM/yyyy hh:mm a' }}</td>
+                <td>{{ transaccion.usuario }}</td>
+                <td>{{ transaccion.idProducto }}</td>
+                <td>{{ transaccion.cantComprada }}</td>
+                <td>{{ transaccion.valorUnitario }}</td>
+                <td>{{ transaccion.idTipoPago }}</td>
+                <td>{{ transaccion.idBanco }}</td>
+                <td>{{ transaccion.idFranquicia }}</td>
+                <td>{{ transaccion.numTarjeta }}</td>
+                <td>{{ transaccion.estado }}</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -18,7 +18,7 @@ import co.edu.unbosque.view.Console;
 public class MainGraphs {
 
 	public static void main(String[] args) {
-		doGraph1();
+		//doGraph1();
 		doGraph2();
 	}
 

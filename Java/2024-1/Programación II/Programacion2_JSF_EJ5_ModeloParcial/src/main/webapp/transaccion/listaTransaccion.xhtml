@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+<!-- CABECERA -->
+<h:head>
+</h:head>
+
+<!-- CUERPO -->
+<h:body>
+
+	<div class="card crud-demo">
+
+		<!-- FORMULARIO -->
+		<h:form id="form">
+			<p:growl id="messages" showDetail="true" />
+
+			<!-- TOOLBAR PRIMEFACES -->
+			<p:toolbar>
+				<p:toolbarGroup>
+					<!-- BOTON NUEVA TRANSACCION -->
+					<p:commandButton value="Nueva Transaccion" styleClass="ui-button-success" icon="pi pi-plus"
+						actionListener="#{transaccionMB.abrirNuevaTransaccion}"
+						update=":dialogos:gestionar-contenido-transaccion"
+						oncomplete="PF('dialogoGestionarTransaccion').show()" style="margin-right: .5rem">
+					</p:commandButton>
+					<!-- BOTON ELIMINAR TRANSACCIONES SELECCIONADAS -->
+					<p:commandButton id="boton-eliminar-transacciones"
+						oncomplete="PF('dialogoEliminarTransacciones').show()"
+						value="#{transaccionMB.mensajeBotonEliminar}" icon="pi pi-trash" styleClass="ui-button-danger"
+						disabled="#{transaccionMB.haSeleccionadoTransacciones() ? false : true}" global="true">
+					</p:commandButton>
+				</p:toolbarGroup>
+			</p:toolbar>
+
+			<!-- CRUD DATATABLE PRIMEFACES -->
+			<p:dataTable id="dt-transacciones" widgetVar="dtTransacciones" var="transaccion"
+				value="#{transaccionMB.transacciones}" reflow="true" styleClass="tabla-transacciones"
+				selection="#{transaccionMB.transaccionesSeleccionadas}" rowKey="#{transaccion.id}"
+				paginator="true" rows="10" rowSelectMode="add" paginatorPosition="bottom">
+
+				<f:facet name="header">
+					<div class="products-table-header">
+						<span style="font-weight: bold">TRANSACCIONES</span>
+						<!--
+						<div align="right" class="filter-container ui-input-icon-left">
+							<i class="pi pi-search"></i>
+							<p:inputText id="globalFilter" onkeyup="PF('dtTransacciones').filter()" placeholder="Buscar" />
+						</div>
+						-->
+					</div>
+				</f:facet>
+
+				<p:ajax event="rowSelect" update=":form:boton-eliminar-transacciones" />
+				<p:ajax event="rowUnselect" update=":form:boton-eliminar-transacciones" />
+				<p:ajax event="rowSelectCheckbox" update=":form:boton-eliminar-transacciones" />
+				<p:ajax event="rowUnselectCheckbox" update=":form:boton-eliminar-transacciones" />
+				<p:ajax event="toggleSelect" update=":form:boton-eliminar-transacciones" />
+
+				<p:column selectionMode="multiple" exportable="false" style="text-align:center;" />
+
+				<p:column headerText="ID" sortBy="#{transaccion.id}">
+					<h:outputText value="#{transaccion.id}" />
+				</p:column>
+
+				<p:column headerText="Fecha-Hora" sortBy="#{transaccion.fechaHora}">
+					<h:outputText value="#{transaccion.fechaHora}" />
+				</p:column>
+
+				<p:column headerText="Usuario" sortBy="#{transaccion.usuario}">
+					<h:outputText value="#{transaccion.usuario}" />
+				</p:column>
+
+				<p:column headerText="Producto" sortBy="#{transaccion.idProducto}">
+					<h:outputText value="#{transaccion.idProducto}" />
+				</p:column>
+
+				<p:column headerText="Cantidad Comprada" sortBy="#{transaccion.cantComprada}">
+					<h:outputText value="#{transaccion.cantComprada}" />
+				</p:column>
+
+				<p:column headerText="Valor Unitario" sortBy="#{transaccion.valorUnitario}">
+					<h:outputText value="#{transaccion.valorUnitario}" style="font-weight: 700">
+						<f:convertNumber currencySymbol="COP " type="currency" />
+					</h:outputText>
+				</p:column>
+
+				<p:column headerText="Tipo de Pago" sortBy="#{transaccion.idTipoPago}">
+					<h:outputText value="#{transaccion.idTipoPago}" />
+				</p:column>
+
+				<p:column headerText="Entidad Financiera" sortBy="#{transaccion.idBanco}">
+					<h:outputText value="#{transaccion.idBanco}" />
+				</p:column>
+
+				<p:column headerText="Franquicia" sortBy="#{transaccion.idFranquicia}">
+					<h:outputText value="#{transaccion.idFranquicia}" />
+				</p:column>
+
+				<p:column headerText="Numero de Tarjeta" sortBy="#{transaccion.numTarjeta}">
+					<h:outputText value="#{transaccion.numTarjeta}" />
+				</p:column>
+
+				<p:column headerText="Estado" sortBy="#{transaccion.estado}">
+					<h:outputText styleClass="insignia-transaccion status-#{transaccion.estado.toLowerCase()}"
+						value="#{transaccion.estado}" />
+				</p:column>
+
+				<p:column exportable="false">
+					<!-- BOTON EDITAR INDIVIDUAL -->
+					<p:commandButton icon="pi pi-pencil" update=":dialogos:gestionar-contenido-transaccion"
+						oncomplete="PF('dialogoGestionarTransaccion').show()"
+						styleClass="edit-button rounded-button ui-button-success" process="@this"
+						style="margin-right: .5rem">
+						<f:setPropertyActionListener value="#{transaccion}"
+							target="#{transaccionMB.transaccionSeleccionada}" />
+					</p:commandButton>
+
+					<!-- BOTON ELIMINAR INDIVIDUAL -->
+					<p:commandButton class="ui-button-warning rounded-button" icon="pi pi-trash" process="@this"
+						oncomplete="PF('dialogoEliminarTransaccion').show()">
+						<f:setPropertyActionListener value="#{transaccion}"
+							target="#{transaccionMB.transaccionSeleccionada}" />
+					</p:commandButton>
+				</p:column>
+
+			</p:dataTable>
+		</h:form>
+
+		<!-- DIALOGOS -->
+		<h:form id="dialogos">
+
+			<!-- DIALOGO CON EL PANEL PARA CREAR Y EDITAR TRANSACCIONES -->
+			<p:dialog header="Detalles de Transacción" showEffect="fade" modal="true"
+				widgetVar="dialogoGestionarTransaccion" focus="usuario" responsive="true" resizable="false">
+				<p:outputPanel id="gestionar-contenido-transaccion" class="ui-fluid">
+					<p:outputPanel>
+
+						<!-- CAMPO USUARIO -->
+						<div class="field col">
+							<p:outputLabel for="usuario" style="font-weight: bold; font-style: italic;">Usuario</p:outputLabel>
+							<p:inputText id="usuario" value="#{transaccionMB.transaccionSeleccionada.usuario}"
+								required="true" />
+						</div>
+						<!-- CAMPO PRODUCTO -->
+						<div class="field col">
+							<p:outputLabel for="producto" style="font-weight: bold; font-style: italic;">Producto</p:outputLabel>
+							<p:inputText id="producto" value="#{transaccionMB.transaccionSeleccionada.idProducto}"
+								required="true" />
+						</div>
+						<!-- CAMPO CANTIDAD COMPRADA -->
+						<div class="field">
+							<p:outputLabel for="cantidadComprada" style="font-weight: bold; font-style: italic;">Cantidad Comprada</p:outputLabel>
+							<p:spinner id="cantidadComprada" min="1"
+								value="#{transaccionMB.transaccionSeleccionada.cantComprada}" required="true" />
+						</div>
+						<!-- CAMPO VALOR UNITARIO -->
+						<div class="field">
+							<p:outputLabel for="valorUnitario" style="font-weight: bold; font-style: italic;">Valor Unitario</p:outputLabel>
+							<p:inputNumber id="valorUnitario"
+								value="#{transaccionMB.transaccionSeleccionada.valorUnitario}" symbol=" COP"
+								symbolPosition="s" decimalSeparator="." thousandSeparator="," required="true" />
+						</div>
+						<!-- CAMPO TIPO DE PAGO -->
+						<div class="field">
+							<p:outputLabel for="tipoDePago" style="font-weight: bold; font-style: italic;">Tipo de Pago</p:outputLabel>
+
+							<p:selectOneMenu id="tipoDePago" value="#{transaccionMB.transaccionSeleccionada.idTipoPago}"
+								required="true">
+								<f:selectItem itemLabel="Seleccione" itemValue="" />
+								<f:selectItem itemLabel="Efectivo" itemValue="1" />
+								<f:selectItem itemLabel="Tarjeta" itemValue="2" />
+								<f:selectItem itemLabel="Transacción" itemValue="3" />
+							</p:selectOneMenu>
+						</div>
+
+						<!-- CAMPO ENTIDAD FINANCIERA -->
+						<div class="field">
+							<p:outputLabel for="entidadFinanciera" style="font-weight: bold; font-style: italic;">Entidad Financiera</p:outputLabel>
+
+							<p:selectOneMenu id="entidadFinanciera"
+								value="#{transaccionMB.transaccionSeleccionada.idBanco}" required="true">
+								<f:selectItem itemLabel="Seleccione" itemValue="" />
+								<f:selectItem itemLabel="Bancolombia" itemValue="1" />
+								<f:selectItem itemLabel="Davivienda" itemValue="2" />
+								<f:selectItem itemLabel="Falabella" itemValue="3" />
+							</p:selectOneMenu>
+						</div>
+						<!-- CAMPO FRANQUICIA -->
+						<div class="field">
+							<p:outputLabel for="franquicia" style="font-weight: bold; font-style: italic;">Franquicia</p:outputLabel>
+							<p:selectOneMenu id="franquicia"
+								value="#{transaccionMB.transaccionSeleccionada.idFranquicia}" required="true">
+								<f:selectItem itemLabel="Seleccione" itemValue="" />
+								<f:selectItem itemLabel="Olimpica" itemValue="1" />
+								<f:selectItem itemLabel="Cinecolombia" itemValue="2" />
+								<f:selectItem itemLabel="Carulla" itemValue="3" />
+							</p:selectOneMenu>
+						</div>
+						<!-- CAMPO NUMERO DE TARJETA -->
+						<div class="field">
+							<p:outputLabel for="numTarjeta" style="font-weight: bold; font-style: italic;">Numero de Tarjeta</p:outputLabel>
+							<p:inputMask id="numTarjeta" value="#{transaccionMB.transaccionSeleccionada.numTarjeta}"
+								mask="9999-9999-9999-9999" validateMask="true" required="true" />
+						</div>
+						<!-- CAMPO ESTADO -->
+						<div class="field">
+							<p:outputLabel for="estado" style="font-weight: bold; font-style: italic;">Estado</p:outputLabel>
+							<p:selectOneRadio id="estado" value="#{transaccionMB.transaccionSeleccionada.estado}"
+								layout="responsive" required="true" columns="2">
+
+								<f:selectItem itemLabel="Activo" itemValue="A" />
+								<f:selectItem itemLabel="Inactivo" itemValue="I" />
+
+							</p:selectOneRadio>
+						</div>
+					</p:outputPanel>
+				</p:outputPanel>
+
+				<!-- PIE DE PAGINA DIALOGO -->
+				<f:facet name="footer">
+					<!-- BOTON GUARDAR TRANSACCION -->
+					<p:commandButton value="Guardar" icon="pi pi-check"
+						actionListener="#{transaccionMB.guardarTransaccion}" update="gestionar-contenido-transaccion"
+						process="gestionar-contenido-transaccion @this" />
+					<!-- BOTON CANCELAR TRANSACCION -->
+					<p:commandButton value="Cancelar" icon="pi pi-times"
+						onclick="PF('dialogoGestionarTransaccion').hide()" class="ui-button-secondary" type="button" />
+				</f:facet>
+			</p:dialog>
+
+			<!-- DIALOGO DE CONFIRMACION PARA ELIMINAR TRANSACCION INDIVIDUALMENTE -->
+			<p:confirmDialog widgetVar="dialogoEliminarTransaccion" showEffect="fade" width="300"
+				message="Desea eliminar la Transacción?" header="Confirmar" severity="warn">
+				<p:commandButton value="Si" icon="pi pi-check"
+					actionListener="#{transaccionMB.eliminarTransaccion}" process="@this"
+					update=":form:boton-eliminar-transacciones"
+					oncomplete="PF('dialogoEliminarTransaccion').hide()" />
+				<p:commandButton value="No" type="button" styleClass="ui-button-secondary" icon="pi pi-times"
+					onclick="PF('dialogoEliminarTransaccion').hide()" />
+			</p:confirmDialog>
+
+			<!-- DIALOGO DE CONFIRMACION PARA ELIMINAR TRANSACCIONES -->
+			<p:confirmDialog widgetVar="dialogoEliminarTransacciones" showEffect="fade" width="300"
+				message="Desea eliminar las Transacciones?" header="Confirmar" severity="warn">
+				<p:commandButton value="Si" icon="pi pi-check"
+					actionListener="#{transaccionMB.eliminarTransaccionesSeleccionadas}" process="@this"
+					update=":form:boton-eliminar-transacciones"
+					oncomplete="PF('dialogoEliminarTransacciones').hide()" />
+				<p:commandButton value="No" type="button" styleClass="ui-button-secondary" icon="pi pi-times"
+					onclick="PF('dialogoEliminarTransacciones').hide()" />
+			</p:confirmDialog>
+		</h:form>
+	</div>
+
+</h:body>
+
+</html>

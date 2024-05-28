@@ -1,0 +1,18 @@
+{
+    "cmake.configureOnOpen": false,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "prg2_pf",
+            "database": "bdcomercial",
+            "username": "root"
+        }
+    ]
+}
