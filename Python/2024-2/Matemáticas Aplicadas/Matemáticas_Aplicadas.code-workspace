@@ -1,0 +1,65 @@
+{
+	"folders": [
+		{
+			"path": "AritméticaModular"
+		},
+		{
+			"path": "Calculadora"
+		},
+		{
+			"path": "ClienteServidor"
+		},
+		{
+			"path": "Codificacion"
+		},
+		{
+			"path": "CuadradoMagico"
+		},
+		{
+			"path": "DeteccionErrores"
+		},
+		{
+			"path": "Encriptacion"
+		},
+		{
+			"path": "Evaluacion"
+		},
+		{
+			"path": "Evaluacion1B"
+		},
+		{
+			"path": "Evaluacion1C"
+		},
+		{
+			"path": "FuncionesHash"
+		},
+		{
+			"path": "ManejoArchivos"
+		},
+		{
+			"path": "Practica3"
+		},
+		{
+			"path": "Practica4"
+		},
+		{
+			"path": "ProcesamientoImagenes"
+		},
+		{
+			"path": "RegresionLineal"
+		},
+		{
+			"path": "SetProblemas_01"
+		},
+		{
+			"path": "SetProblemas_02"
+		},
+		{
+			"path": "TallerGrafos"
+		},
+		{
+			"path": "TallerNov"
+		}
+	],
+	"settings": {}
+}
