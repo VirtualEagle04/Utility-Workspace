@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Ingredientes" directorySegmentName="seg_0" id="84B0C600-A32F-78F9-FA25-64C4DFFAA5A9">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ingrediente" id="03FBC88F-0E76-1F83-98E1-605ABC0C2A87">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nombre_ingrediente" id="05DF10BE-2C0C-6F02-6377-745A97F39FCB">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_Ingredientes" id="82880945-8FDA-8BBC-1838-840082F54DA4">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="ck_nin" id="8A7E6F22-9C4B-0ACC-FA9C-E71FF39D98F4">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="un_ing" id="108B7907-EC96-9968-D03F-8292372C704B">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TiposPedidos" directorySegmentName="seg_0" id="715CD24B-7DA1-2D15-61EB-D6D80F903639">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="incremento" id="5FC8E2C2-99B5-C036-A6D7-1AEA977E7FB7">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="clase_pedido" id="78C161BC-4CB6-7AAB-2CE0-54446AE611DA">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="minimo" id="9A92A9EA-9079-43D4-1922-85E92B0881B8">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_TiposPedidos" id="43FE43C9-0B2A-3DBF-FF83-6490583EA8F9">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="ck_min" id="35A2E4BC-9098-2817-C763-90D865539ECE">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+<TableCheckConstraint name="ck_inc" id="82DFB563-F321-7A03-D53B-0700ABD86F37">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+<TableCheckConstraint name="ck_cla" id="E79E1D17-9326-319A-5C55-45115A3C2DDB">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev20c>

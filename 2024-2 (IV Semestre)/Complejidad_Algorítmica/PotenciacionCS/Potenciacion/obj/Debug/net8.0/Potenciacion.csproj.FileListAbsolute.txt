@@ -1,0 +1,14 @@
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\bin\Debug\net8.0\Potenciacion.exe
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\bin\Debug\net8.0\Potenciacion.deps.json
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\bin\Debug\net8.0\Potenciacion.runtimeconfig.json
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\bin\Debug\net8.0\Potenciacion.dll
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\bin\Debug\net8.0\Potenciacion.pdb
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\Potenciacion.GeneratedMSBuildEditorConfig.editorconfig
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\Potenciacion.AssemblyInfoInputs.cache
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\Potenciacion.AssemblyInfo.cs
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\Potenciacion.csproj.CoreCompileInputs.cache
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\Potenciacion.dll
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\refint\Potenciacion.dll
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\Potenciacion.pdb
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\Potenciacion.genruntimeconfig.cache
+F:\2024-2\Complejidad_Algorítmica\PotenciacionCS\Potenciacion\obj\Debug\net8.0\ref\Potenciacion.dll

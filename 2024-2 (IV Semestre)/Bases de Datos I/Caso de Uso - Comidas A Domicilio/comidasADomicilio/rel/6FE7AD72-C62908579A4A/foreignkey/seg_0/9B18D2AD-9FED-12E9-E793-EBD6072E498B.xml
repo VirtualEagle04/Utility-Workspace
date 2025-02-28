@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9B18D2AD-9FED-12E9-E793-EBD6072E498B" containerWithKeyObject="C8763DEF-D01F-1CB1-F709-DE7ABFE17153" localFKIndex="564C8E92-2215-09B1-38E3-AAB509487640" name="fk_res_ing">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>A2A88E41-ACCB-BA5F-998F-2BB3351B25B5</importedID>
+<referredTableLongName>Ingredientes</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>84B0C600-A32F-78F9-FA25-64C4DFFAA5A9</referredTableID>
+<keyObject>82880945-8FDA-8BBC-1838-840082F54DA4</keyObject>
+<referredKeyID>82880945-8FDA-8BBC-1838-840082F54DA4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ingrediente</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

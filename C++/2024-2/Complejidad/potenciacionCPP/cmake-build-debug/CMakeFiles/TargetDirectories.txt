@@ -1,3 +1,0 @@
-C:/Users/fedeS/OneDrive/Documents/GitHub/Utility-Workspace/C++/2024-2/Complejidad/potenciacionCPP/cmake-build-debug/CMakeFiles/potenciacionCPP.dir
-C:/Users/fedeS/OneDrive/Documents/GitHub/Utility-Workspace/C++/2024-2/Complejidad/potenciacionCPP/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/fedeS/OneDrive/Documents/GitHub/Utility-Workspace/C++/2024-2/Complejidad/potenciacionCPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir

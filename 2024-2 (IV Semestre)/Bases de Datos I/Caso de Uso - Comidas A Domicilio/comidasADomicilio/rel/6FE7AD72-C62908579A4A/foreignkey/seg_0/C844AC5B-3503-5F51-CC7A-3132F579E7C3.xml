@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C844AC5B-3503-5F51-CC7A-3132F579E7C3" containerWithKeyObject="7E1DBBA4-93A7-3687-7709-B3367026DC45" localFKIndex="FE198432-368F-8FDF-951B-52B3C6F268A8" name="fk_rve_ven">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>B50EE202-BF40-1FE6-E0BE-A3BD511343F8</importedID>
+<referredTableLongName>VentasProductos</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>EE06A308-EDB0-7295-A112-9E02EA812973</referredTableID>
+<keyObject>4C5D5012-F442-9F6E-24BB-BED9D3052947</keyObject>
+<referredKeyID>4C5D5012-F442-9F6E-24BB-BED9D3052947</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>fecha_pedido,pedido,venta</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

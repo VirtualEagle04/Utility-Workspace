@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="72BF0FF8-EB33-2B69-F068-813B54784170" name="ProductosEstrella">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>5E1A754B-32D7-E851-7145-C50C7D4F96A1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre_comercial" id="7F6ECD8D-ADF5-4D38-0A8A-1AD1944E17C0">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>54756245-E704-E53E-7A81-3B036779AB41</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>314B54FF-B240-1EB8-DF2E-D519638F600A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="articulo" id="927A070E-B4A2-737F-99FC-188444B0F0CF">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>3F6D0901-819B-686F-5475-0C173A6AB972</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1CAACDFE-5F2F-DC13-9AEF-E03A46A844FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B653E2A-C74D-0BF3-DC46-F25D2D0C7817" referredColumn="859CBC30-772C-C37A-A0D8-6F86BAC5C69C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="96F3A978-8962-9EC8-DDDE-BC0E0781FD3A" name="pk_ProductosEstrella">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>03DBC6A7-4A18-CDB4-9EF1-BDA1BED0476C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F6ECD8D-ADF5-4D38-0A8A-1AD1944E17C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="55CE908C-3529-8C53-F87B-E5D67E9D9732" name="fk_pes_art">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="927A070E-B4A2-737F-99FC-188444B0F0CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_nco" directorySegmentName="seg_0" id="62193442-5288-5E90-A4B1-B3161E589895">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>D0C45C14-A2A0-F3E2-9765-8F86971A5B8E</importedID>
+<rule><![CDATA[nombre_comercial = INITCAP(nombre_comercial)]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

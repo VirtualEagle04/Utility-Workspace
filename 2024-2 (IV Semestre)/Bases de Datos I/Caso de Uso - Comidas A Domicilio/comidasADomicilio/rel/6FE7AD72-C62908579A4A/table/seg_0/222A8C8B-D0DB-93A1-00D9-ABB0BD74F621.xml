@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="222A8C8B-D0DB-93A1-00D9-ABB0BD74F621" name="Repostajes">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>FD1D20AA-15AA-F2A1-D228-36674B57C4F0</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="scooter" id="E318AAD3-5C7F-7FEC-16C8-F5F1380D3AE7">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>12500020-A32F-E609-5C3C-04765C164767</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A074542F-E4AB-E851-3220-F933C4F5AEF6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6071E3AE-085C-4432-5EB7-6D790504C6B3" referredColumn="1D272D74-CA8D-3AC3-CA02-73C557347614"/>
+</associations>
+</Column>
+<Column name="fecha_repostaje" id="89632E2A-D28D-BAC9-4CF4-693DD83FD96F">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>D54E4890-6D3D-A668-F126-0D5A0CDB1883</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>5472AECB-0AEC-52A5-0A4E-554D3D796BE6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coste_repostaje" id="49FEAF4E-77CE-C7A6-2EE0-B0C5DB01F249">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>60F6D724-ACD0-52E0-2E07-A2E3444637AD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57B6E616-A5D7-9831-8270-6ABA57A3890E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A0F5A469-04B2-7F99-7B81-47E6A63BC522" name="pk_Repostajes">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>9873EC81-306B-6940-C9E3-9AAA0E5B512B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E318AAD3-5C7F-7FEC-16C8-F5F1380D3AE7"/>
+<colUsage columnID="89632E2A-D28D-BAC9-4CF4-693DD83FD96F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="847169B9-4EBF-42C9-1012-294ABDE7801E" name="fk_res_sco">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E318AAD3-5C7F-7FEC-16C8-F5F1380D3AE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_cre" directorySegmentName="seg_0" id="8B79151E-A5BB-AC09-68BB-AEA9424698CE">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>3BDFD9F1-E726-C343-AC5B-8C1C25003627</importedID>
+<rule><![CDATA[coste_repostaje > = 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

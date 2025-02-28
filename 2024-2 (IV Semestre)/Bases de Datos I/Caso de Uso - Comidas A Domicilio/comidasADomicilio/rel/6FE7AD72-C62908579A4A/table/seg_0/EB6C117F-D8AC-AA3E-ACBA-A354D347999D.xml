@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB6C117F-D8AC-AA3E-ACBA-A354D347999D" name="RecetasPizzas">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>ACBA7E80-EC67-8B06-D514-3886D919BE68</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="articulo" id="357F609A-4D49-D0C6-C6E6-3BF92DE58B4D">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>87377483-9E9C-CAE9-8372-0CA0E4CB38F6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1CAACDFE-5F2F-DC13-9AEF-E03A46A844FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CE144C00-C1E3-DB36-B8D6-540F50EBECCC" referredColumn="859CBC30-772C-C37A-A0D8-6F86BAC5C69C"/>
+</associations>
+</Column>
+<Column name="ingrediente" id="B552EAD6-3696-46FC-BD44-1DAA306D64E7">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>11BE31DB-C8B9-A6F7-CCC1-AC5B60FA4818</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E1CB643C-1FAA-B1FC-CAE1-EE55BCFE08F5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="04287E7E-FBA9-1A37-E938-DAF018C745EC" referredColumn="03FBC88F-0E76-1F83-98E1-605ABC0C2A87"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="05B044F0-E239-DB86-55D8-0F5C2AA9A524" name="pk_RecetasPizzas">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>7076750D-360B-CC5A-FC4B-8DBB054688D4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="357F609A-4D49-D0C6-C6E6-3BF92DE58B4D"/>
+<colUsage columnID="B552EAD6-3696-46FC-BD44-1DAA306D64E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5225A52-A22F-2B63-6C93-2B5B55DE3D58" name="fk_rpi_car">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="357F609A-4D49-D0C6-C6E6-3BF92DE58B4D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06A514F6-2B48-F4B2-F340-98A9C8847EC2" name="fk_rpi_ing">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B552EAD6-3696-46FC-BD44-1DAA306D64E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
