@@ -1,0 +1,3 @@
+C:/Users/fedeS/Downloads/SeleccionC/cmake-build-debug/CMakeFiles/SeleccionC.dir
+C:/Users/fedeS/Downloads/SeleccionC/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/fedeS/Downloads/SeleccionC/cmake-build-debug/CMakeFiles/rebuild_cache.dir

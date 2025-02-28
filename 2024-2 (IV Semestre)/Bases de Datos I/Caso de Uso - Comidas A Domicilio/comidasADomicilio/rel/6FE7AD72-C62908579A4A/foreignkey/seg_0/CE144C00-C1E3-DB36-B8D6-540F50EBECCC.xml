@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CE144C00-C1E3-DB36-B8D6-540F50EBECCC" containerWithKeyObject="EB6C117F-D8AC-AA3E-ACBA-A354D347999D" localFKIndex="E5225A52-A22F-2B63-6C93-2B5B55DE3D58" name="fk_rpi_car">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>9D45F57D-A052-8F1A-F059-0C755DC23C24</importedID>
+<referredTableLongName>ClaseArticulos</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>E490271C-783B-2650-5A76-A2012F2F11B6</referredTableID>
+<keyObject>979E9D57-FC50-A94A-79FA-CEB31C5E3E02</keyObject>
+<referredKeyID>979E9D57-FC50-A94A-79FA-CEB31C5E3E02</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>articulo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

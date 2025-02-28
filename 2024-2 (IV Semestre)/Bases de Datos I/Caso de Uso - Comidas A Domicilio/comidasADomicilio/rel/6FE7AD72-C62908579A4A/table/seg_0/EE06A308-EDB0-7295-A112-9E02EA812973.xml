@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EE06A308-EDB0-7295-A112-9E02EA812973" name="VentasProductos">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>2906B121-84E6-CD65-B901-CA1E9A0135B2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fecha_pedido" id="FA3D20A7-3D77-CAF9-B497-2DA34682AE21">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>089FCADB-9E39-01FA-2722-BBC447AA84C3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>5472AECB-0AEC-52A5-0A4E-554D3D796BE6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59C435E5-76DF-BEF3-7B6F-DEE131A0DBFB" referredColumn="9D0B82FC-E983-876D-DE26-A897AFA8CA25"/>
+</associations>
+</Column>
+<Column name="pedido" id="8953848D-E759-868D-8B92-46DC8F508099">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>7EFE16D9-E86D-C457-1343-DD5167E04126</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57B6E616-A5D7-9831-8270-6ABA57A3890E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59C435E5-76DF-BEF3-7B6F-DEE131A0DBFB" referredColumn="6CC7DF57-8C17-8689-08C2-B696E49E8650"/>
+</associations>
+</Column>
+<Column name="venta" id="9781C54B-CE22-9E8B-DA40-97B23D05AB36">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>B17D0C74-E804-B8AF-5862-0606E1BBBBAF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57B6E616-A5D7-9831-8270-6ABA57A3890E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="articulo" id="CBA0FB95-C683-47D5-BF36-86348A869CA5">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>FAD85ACA-61D4-EB0F-9B1E-BA045AE0EEA1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1CAACDFE-5F2F-DC13-9AEF-E03A46A844FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36A7298B-FA7A-77B9-3F89-0A4E28AACF6B" referredColumn="A6BC9465-53FD-9BF2-677A-F67D7D937523"/>
+</associations>
+</Column>
+<Column name="tamano" id="E48D5B23-4300-3528-8CBA-5FEAF8BA4713">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>E8C183F6-910E-E685-0DDD-918A5BD62C8C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>3212784A-0F53-F036-8356-47FBED383D23</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36A7298B-FA7A-77B9-3F89-0A4E28AACF6B" referredColumn="202815CF-7330-17A8-E114-431BCF85E04A"/>
+</associations>
+</Column>
+<Column name="unidades" id="452688FE-3C15-3748-EC0D-C980DF5837EE">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>B1726641-A739-16C0-F078-011A67B6D026</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>4A0F221A-A95B-301E-1FDA-50226AB04920</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor_venta" id="79CFE957-74AE-D034-85FA-85A0987122B4">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>262ED8B6-9B00-736F-3E7E-75C5E616F6F6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C4567327-027F-3255-9709-394DE22DBFC1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C5D5012-F442-9F6E-24BB-BED9D3052947" name="pk_VentasProductos">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>B786D394-DFFD-CACB-EDD7-D55B43AC2F76</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA3D20A7-3D77-CAF9-B497-2DA34682AE21"/>
+<colUsage columnID="8953848D-E759-868D-8B92-46DC8F508099"/>
+<colUsage columnID="9781C54B-CE22-9E8B-DA40-97B23D05AB36"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4222FCB0-1FD1-E4C8-3625-675C8532B208" name="fk_ven_art">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBA0FB95-C683-47D5-BF36-86348A869CA5"/>
+<colUsage columnID="E48D5B23-4300-3528-8CBA-5FEAF8BA4713"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E962540-E10F-CF4A-1D2B-D2ADB8BC8FB4" name="fk_ven_ped">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA3D20A7-3D77-CAF9-B497-2DA34682AE21"/>
+<colUsage columnID="8953848D-E759-868D-8B92-46DC8F508099"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

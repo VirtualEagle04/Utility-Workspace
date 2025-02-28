@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="36A7298B-FA7A-77B9-3F89-0A4E28AACF6B" containerWithKeyObject="EE06A308-EDB0-7295-A112-9E02EA812973" localFKIndex="4222FCB0-1FD1-E4C8-3625-675C8532B208" name="fk_ven_art">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>E842AE47-64B3-D1F9-774B-28B8B1DFE75E</importedID>
+<referredTableLongName>Articulos</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D2AC961D-81F9-2DDE-1A19-4926EF54FB38</referredTableID>
+<keyObject>70F393FC-F936-1A9C-AB0C-54FEA4EE4134</keyObject>
+<referredKeyID>70F393FC-F936-1A9C-AB0C-54FEA4EE4134</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>articulo,tamano</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

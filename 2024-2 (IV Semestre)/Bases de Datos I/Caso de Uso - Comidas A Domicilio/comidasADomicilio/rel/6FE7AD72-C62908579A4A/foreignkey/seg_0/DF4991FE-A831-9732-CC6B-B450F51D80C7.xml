@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DF4991FE-A831-9732-CC6B-B450F51D80C7" containerWithKeyObject="CA6F19C8-CB5D-FF98-5392-A97776A4975D" localFKIndex="52F81F56-CE39-EAFA-E817-883C162DCF3E" name="fk_obsC_cli">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>45DF1BB7-6D36-A4FE-B95F-877E7568DD97</importedID>
+<referredTableLongName>Clientes</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>B01D4B9A-58A2-0905-E4CF-224D61D483BC</referredTableID>
+<keyObject>DC85C821-A52F-8099-E60F-19C2D0E188C8</keyObject>
+<referredKeyID>DC85C821-A52F-8099-E60F-19C2D0E188C8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cliente</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

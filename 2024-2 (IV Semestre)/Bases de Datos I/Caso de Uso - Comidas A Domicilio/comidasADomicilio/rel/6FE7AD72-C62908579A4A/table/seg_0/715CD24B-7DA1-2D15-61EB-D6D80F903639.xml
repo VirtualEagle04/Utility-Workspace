@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="715CD24B-7DA1-2D15-61EB-D6D80F903639" name="TiposPedidos">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>01784EDB-7380-E2F4-1AF5-FD7361ACBEDF</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="clase_pedido" id="78C161BC-4CB6-7AAB-2CE0-54446AE611DA">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>0BA75D42-DC0F-4341-20BB-4EB7245BC1E2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1CAACDFE-5F2F-DC13-9AEF-E03A46A844FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="incremento" id="5FC8E2C2-99B5-C036-A6D7-1AEA977E7FB7">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>6ACDEF74-A3DB-6B21-5966-4F30E0CB2A56</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57B6E616-A5D7-9831-8270-6ABA57A3890E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="minimo" id="9A92A9EA-9079-43D4-1922-85E92B0881B8">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>5891341D-11C6-FB7E-CD91-1C51893B5868</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C4567327-027F-3255-9709-394DE22DBFC1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="43FE43C9-0B2A-3DBF-FF83-6490583EA8F9" name="pk_TiposPedidos">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>C00E21B9-62CE-D829-524B-8248230ED08F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78C161BC-4CB6-7AAB-2CE0-54446AE611DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_cla" directorySegmentName="seg_0" id="E79E1D17-9326-319A-5C55-45115A3C2DDB">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>10FB9589-DC20-EAFD-ACE9-BA7E375E41FC</importedID>
+<rule><![CDATA[clase_pedido IN ('L', 'R', 'D')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="ck_inc" directorySegmentName="seg_0" id="82DFB563-F321-7A03-D53B-0700ABD86F37">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>FC84CEA8-726A-8848-6EEC-37A2414484EB</importedID>
+<rule><![CDATA[incremento > 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="ck_min" directorySegmentName="seg_0" id="35A2E4BC-9098-2817-C763-90D865539ECE">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>50671520-BF26-7229-D669-28C029BF4574</importedID>
+<rule><![CDATA[minimo > 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

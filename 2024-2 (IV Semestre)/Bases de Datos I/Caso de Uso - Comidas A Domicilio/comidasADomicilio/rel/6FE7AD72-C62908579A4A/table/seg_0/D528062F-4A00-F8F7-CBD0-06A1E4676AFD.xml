@@ -1,0 +1,184 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D528062F-4A00-F8F7-CBD0-06A1E4676AFD" name="Pedidos">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>06C784A9-64D6-7A38-5004-FF5BD7DA3CB2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fecha_pedido" id="9D0B82FC-E983-876D-DE26-A897AFA8CA25">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>1C04BEE1-8A91-422A-5567-F7092C1E3681</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>5472AECB-0AEC-52A5-0A4E-554D3D796BE6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pedido" id="6CC7DF57-8C17-8689-08C2-B696E49E8650">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>EC50015C-449F-A66F-F969-CA1F9DCB5BCB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57B6E616-A5D7-9831-8270-6ABA57A3890E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="clase_pedido" id="862F1D32-B686-8466-581D-B17A9A3BA7D8">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>DE3CE056-268D-D736-1BDE-FFB213B765B4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1CAACDFE-5F2F-DC13-9AEF-E03A46A844FF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="57DB841A-37CC-4FCE-0D0D-188D35F8A2F8" referredColumn="78C161BC-4CB6-7AAB-2CE0-54446AE611DA"/>
+</associations>
+</Column>
+<Column name="total_pedido" id="6D86F03C-8426-2F37-DD92-164DF254BBA6">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>144B9B41-15AB-0FB2-F52D-B96D0B6D8912</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C4567327-027F-3255-9709-394DE22DBFC1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cliente" id="07026993-771E-CEE3-0AED-8B07DD35010E">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>AE85FA82-6336-AF25-AB47-5408CDC28258</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>7B5449FF-0E34-79C7-50CA-15DA3CD872FE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6ECF70E9-19C5-5DA0-E628-C628E2601B2C" referredColumn="59385ACD-77F1-D2BF-52C9-F035D84FD367"/>
+</associations>
+</Column>
+<Column name="dni_repartidor" id="82A62E44-D411-DD6D-D07B-B8BD8D45195B">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>1A1606C0-A46F-4336-7199-767989E0B868</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>367F16F6-8BFE-7D68-5B16-D36115BEB516</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7104B0C1-9053-2495-2D20-BB79796E76BF" referredColumn="AC7738F3-78D8-9BC1-80EA-E182AEE38F7D"/>
+</associations>
+</Column>
+<Column name="valor_receta" id="FA7E2BE4-6121-DAC0-FF42-6951C8136166">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>BCFBCE19-45A4-E2DD-210D-0A3503E5BBDE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C4567327-027F-3255-9709-394DE22DBFC1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="incremento" id="88B60FCB-066C-0451-4933-38C00923DE4D">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>DF9BB728-1294-9216-3F82-068726051A39</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>57B6E616-A5D7-9831-8270-6ABA57A3890E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="37F5CFEB-27DE-F262-F804-D4FAA17DE902" name="pk_Pedidos">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>0B53F24B-031C-0CD8-ACD7-0FAA4BE581AC</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D0B82FC-E983-876D-DE26-A897AFA8CA25"/>
+<colUsage columnID="6CC7DF57-8C17-8689-08C2-B696E49E8650"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F9E53E93-03F7-B2D6-1D20-D0664F04DBF7" name="fK_ped_cli">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07026993-771E-CEE3-0AED-8B07DD35010E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A946B1B7-00FB-8B17-CD4D-16333921B86F" name="fk_ped_rep">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82A62E44-D411-DD6D-D07B-B8BD8D45195B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="70A81EC0-38F2-77F4-5D56-5882287C2847" name="fK_ped_tpe">
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="862F1D32-B686-8466-581D-B17A9A3BA7D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_vre" directorySegmentName="seg_0" id="B2314B50-CF9B-C129-56A6-ABB191ABD1E5">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>8A3F7B2E-BB5B-D896-0123-63D0386438F6</importedID>
+<rule><![CDATA[valor_receta > = 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="ck_int" directorySegmentName="seg_0" id="FD2E7700-BE47-439A-5966-47931E3099BF">
+<sourceDDLFile>bd2.sql</sourceDDLFile>
+<createdBy>fedeS</createdBy>
+<createdTime>2024-10-02 03:26:05 UTC</createdTime>
+<ownerDesignName>comidasADomicilio</ownerDesignName>
+<importedID>34E72987-5816-B4FF-BE46-C4DE085507B0</importedID>
+<rule><![CDATA[incremento > = 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>
